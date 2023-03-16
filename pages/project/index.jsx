@@ -7,6 +7,14 @@ import img3 from "../../UI/Resources/Image/skulls-unscreen.gif";
 import img4 from "../../UI/Resources/Image/kitty.gif";
 import img5 from "../../UI/Resources/Image/darkbulb.gif";
 import img6 from "../../UI/Resources/Image/collision.gif";
+
+// import img from "../../UI/Resources/Image/spinskull-unscreen.gif";
+// import img1 from "../../UI/Resources/Image/star-unscreen.gif";
+// import img2 from "../../UI/Resources/Image/football-unscreen.gif";
+// import img3 from "../../UI/Resources/Image/skulls-unscreen.gif";
+// import img4 from "../../UI/Resources/Image/kitty-unscreen.gif";
+// import img5 from "../../UI/Resources/Image/darkbulb-unscreen.gif";
+// import img6 from "../../UI/Resources/Image/collision-unscreen.gif";
 import Link from "next/link";
 import { useRouter } from "next/router";
 function Project({ value }) {
@@ -102,7 +110,7 @@ function Project({ value }) {
                 >
                   {/* <Link href={{router.push()}}> */}
                   <div className=" relative border-t bg-black shadow-md shadow-[#9d9898] ">
-                    <div className=" h-[200px]    hover-4">
+                    <div className=" h-[250px]    ">
                       <Image
                         src={val.image}
                         // placeholder="blur"
@@ -112,11 +120,11 @@ function Project({ value }) {
                         alt={"loading ..."}
                         height={"100%"}
                         width={"100%"}
-                        className="w-full h-[200px]    object-cover object-center "
+                        className="w-full h-[250px]    object-cover object-center "
                       />
                       <div
                         className="
-                      //  hover:bg-gradient-to-b picsDelay w-full h-[200px] hover:from-[#69a1ab]
+                      //  hover:bg-gradient-to-b picsDelay w-full h-[250px] hover:from-[#69a1ab]
                       //    bg-gradient-to-t from-[#152a2e]
                       //   hover:opacity-70  absolute top-0 flex   justify-ceter items-center z-50 "
                       >

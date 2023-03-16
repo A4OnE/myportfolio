@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "../Navigation/Layout/Layout";
 import Image from "next/image";
 import img from "../../UI/Resources/Image/hiccup.gif";
+import hi from "../../UI/Resources/Image/hi.gif";
 import SocialMedia from "../../PageComponent/Home/SocialMedia/SocialMedia";
 import Experience from "../experience";
 import WhatIDo from "../whatIDo";
@@ -33,15 +34,31 @@ function Home() {
   return (
     <Layout>
       <div className="px-4 pt-5 pb-5 md:px-14  overflow-hidden   md:pt-14 md:pb-8  h-full">
-        <div className=" py-10 h-[600px]">
+        <div className=" py-10 md:h-[600px]">
           <div className="md:mt-8">
             {myIntroduction.map((val, i) => {
               return (
                 <div key={i} className="md:grid grid-cols-12 ">
                   <div className="  md:mt-14 col-span-8">
                     <Fade bottom>
-                      <div className=" text-3xl md:text-6xl font-bold">
-                        {val.title}
+                      <div className=" flex gap-2 items-center">
+                        <div className="text-[28px] md:text-6xl font-bold">
+                          {" "}
+                          {val.title}
+                        </div>
+                        <div className=" h-12 md:h-66px">
+                          <Image
+                            src={hi}
+                            // placeholder="blur"
+                            //   srcSet={`${val.image} 2x, ${val.image} 600vw`}
+                            //   blurDataURL={val.image}
+                            // priority
+                            alt={"loading ..."}
+                            height={"100%"}
+                            width={"100%"}
+                            className="w-full h-12  md:h-[66px]    object-contain "
+                          />
+                        </div>
                       </div>
                       <div className="mt-8 md:text-[32px]   font-medium  md:w-10/12">
                         {val.description}
@@ -102,6 +119,7 @@ function Home() {
           <Contact />
         </div>
       </div>
+
       <div className="">
         <Footer />
       </div>

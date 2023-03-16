@@ -68,14 +68,14 @@ function WhatIDo() {
       </div>
 
       <div className="md:grid  grid-cols-12 md:gap-20 pt-7 md:pb-14">
-        <div className="col-span-6 h-fit w-full  ">
+        <div className="col-span-6 h-fit w-full  md:-mt-16 md:my-0  ">
           <Fade left>
             <Image
               src={image}
               height={100}
               width={600}
               quality={100}
-              className=" h-[350px] md:h-[620px] w-full"
+              className="  md:h-[620px] object-cover w-full "
             />
           </Fade>
         </div>
