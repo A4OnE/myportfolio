@@ -1,0 +1,50 @@
+.wrapper {
+  height: 10px;
+}
+
+.container {
+  background-color: rgb(209, 209, 209);
+  border-radius: 10px;
+}
+
+.barCompleted {
+  background-color: rgb(72, 176, 211);
+  border-radius: 10px;
+  width: 80%;
+  height: 10px;
+}
+
+.label {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: rgb(3, 90, 3);
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 55px;
+  right: 0;
+}
+.hover-4 {
+  --c: hsl(0, 0%, 60%);
+  line-height: 1.2em;
+  background: conic-gradient(from -135deg at 0% 50%, var(--c) 90deg, #0000 0) 0
+      var(--p, 100%),
+    conic-gradient(
+        from -135deg at 1.3em -100%,
+        rgba(244, 9, 9, 0) 90deg,
+        var(--c) 0
+      )
+      0% var(--p, -100%);
+  background-size: var(--s, 0%) 200%;
+  background-repeat: no-repeat;
+  transition: 0.4s ease-in, background-position 1s;
+}
+.hover-4:hover {
+  --p: 100%;
+  --s: calc(
+    100% + 1.3em
+  ); /* it should be 0.6em(1.2em/2) but we use a litte bigger */
+  color: #fff;
+}
