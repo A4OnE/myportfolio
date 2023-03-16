@@ -63,7 +63,9 @@ function Project({ value }) {
 
   return (
     <div id="projects">
-      <div className="text-4xl  uppercase  pt-24 font-bold">my projects</div>
+      <div className="text-2xl md:text-4xl  uppercase pt-16 md:pt-24 font-bold">
+        my projects
+      </div>
       <div className=" px-2  relative z-20 ">
         <div
           className={`

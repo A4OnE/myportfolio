@@ -70,7 +70,7 @@ function TopBar({ DarkTheme, Theme }) {
         <div className="w-full" onClick={() => router.reload()}>
           <Link href={"/"} passHref>
             <div
-              className={`flex gap-5 text-2xl mx-36 mt-5 ${
+              className={`flex md:gap-5 text-lg md:text-2xl   justify-start md:mx-36 mt-5 ${
                 DarkTheme ? "text-white" : "text-orange-500 "
               } transition-all duration-300 delay-100 ease-in-out`}
             >
@@ -124,151 +124,101 @@ function TopBar({ DarkTheme, Theme }) {
           </div>
         </div>
         {/* mobile device */}
-        {/* <div className="flex flex-1 h-full items-center absolute right-6 lg:hidden text-black   justify-end">
-        <button onClick={() => setShowSidebar(true)}>
-          <MdDehaze className="text-mainColor text-4xl " />
-        </button>
-        <div
-          className={`${
-            showSidebar
-              ? "bg-black fixed z-30 top-0 right-0 bottom-0 left-0"
-              : ""
-          } bg-opacity-80 `}
-        >
-          <div
-            className={` grid grid-cols-12 fixed  z-10 top-0 bottom-0  left-0 right-0  ${
-              showSidebar ? "translate-x-0" : "translate-x-full"
-            } transition-all ease-in-out duration-700 delay-300`}
-          >
-            <div
-              className={`   bg-[#ffffff]  col-span-9 fixed right-0 z-50 top-0 bottom-0 h-screen w-80`}
-            >
-              <div className="text-black md:hidden   flex-1  items-center h-44 w-full ">
-                <Image
-                  alt={"Loading ..."}
-                  src={LOGO}
-                  height={100}
-                  width={500}
-                  className="h-56 w-full "
-                  priority
-                />
-              </div>
-              <div
-                className={`lg:hidden block gap-4 mt-12  capitalize text-lg font-medium  items-center justify-center`}
-              >
-                {NavData.map((val, i) => {
-                  if (val.subNav) {
-                    return (
-                      <div
-                        className="flex flex-col gap-2   items-start overflow-hidden  "
-                        key={i}
-                        onClick={() => {
-                          showSubNav(!subNav);
-                          setID(i);
-                        }}
-                      >
-                        <div
-                          className={`hover:scale-105 flex  relative overflow-hidden items-center gap-1
-                     duration-700  delay-200 cursor-pointer px-6 my-2 ${
-                       val.path === router.pathname
-                         ? "bg-mainColor w-full text-white py-3"
-                         : " text-mainColor "
-                     }`}
-                        >
-                          <div> {val.title}</div>
-                          {subNav && ID === i ? (
-                            <div className="text-2xl ">
-                              <MdKeyboardArrowDown />
-                            </div>
-                          ) : (
-                            <div className="text-2xl">
-                              <MdKeyboardArrowUp />
-                            </div>
-                          )}
-                        </div>
-                        <Collapse
-                          isOpen={subNav && ID === i}
-                          className={
-                            "app__collapse app__collapse--gradient " +
-                            (subNav && ID === i
-                              ? "app__collapse--active absolte w-full  z-[400] UserProfile "
-                              : "UserProfile  w-full ")
-                          }
-                          transition="height 800ms cubic-bezier(0.4, 0, 0.2, 1)"
-                          aria-hidden={subNav && ID === i ? "false" : "true"}
-                          elementType="article"
-                          render={() => (
-                            <React.Fragment>
-                              <div
-                                className={`  transition-all ease-in-out   duration-300 delay-100 
-                    bg-[#f3f1f1]    py-4`}
-                              >
-                                {val?.subNav.map((items, i) => {
-                                  return (
-                                    <div key={i}>
-                                      <Link href={items.path} passHref>
-                                        <div
-                                          className={`   cursor-pointer  
-                                           tracking-wide 
-                                          text-[16.5px] font-sans font-[400] py-4 ${
-                                            items.path === router.pathname
-                                              ? " text-white bg-mainColor "
-                                              : "  text-mainColor   "
-                                          } px-2 `}
-                                        >
-                                          <div className="px-2">
-                                            {" "}
-                                            {items.titles}
-                                          </div>
-                                          <div className="border-b border-gray-400 h-1 "></div>
-                                        </div>
-                                      </Link>
-                                    </div>
-                                  );
-                                })}
-                              </div>
-                            </React.Fragment>
-                          )}
-                        />
-                      </div>
-                    );
-                  } else {
-                    return (
-                      <div key={i}>
-                        <Link
-                          href={val?.path}
-                          className="flex gap-2  items-center"
-                        >
-                          <div
-                            className={`hover:scale-105  my-2 px-6 duration-700 delay-200 cursor-pointer py-1 ${
-                              val.path === router.pathname
-                                ? "bg-mainColor w-full text-white py-3"
-                                : " text-mainColor "
-                            } `}
-                          >
-                            {val.title}
-                          </div>
-                        </Link>
-                      </div>
-                    );
-                  }
-                })}
-              </div>
-            </div>
-          </div>
+        <div className="flex flex-1 h-full items-center absolute right-6 lg:hidden text-black   justify-end">
+          <button onClick={() => setShowSidebar(true)}>
+            <MdDehaze
+              className={` ${
+                DarkTheme ? "text-white" : "text-black"
+              } text-4xl `}
+            />
+          </button>
           <div
             className={`${
               showSidebar
-                ? "flex absolute col-span-3 top-3 w-full z-50 left-3"
-                : "hidden"
-            } ''`}
+                ? "bg-black fixed z-30 top-0 right-0 bottom-0 left-0"
+                : ""
+            } bg-opacity-80 `}
           >
-            <button onClick={() => setShowSidebar(false)}>
-              <MdClose className="text-black  text-[50px] p-1 bg-white rounded-full" />
-            </button>
+            <div
+              className={` grid grid-cols-12 fixed  z-10 top-0 bottom-0  left-0 right-0  ${
+                showSidebar
+                  ? "translate-x-0 transition-all ease-in-out duration-700 delay-300"
+                  : "translate-x-full transition-all ease-in-out duration-200 delay-100"
+              } `}
+            >
+              <div
+                className={`   bg-[#ffffff] w-80 col-span-9 fixed right-0 z-50 top-0 bottom-0 h-screen `}
+              >
+                <div className="w-full ">
+                  <div
+                    className={`flex  gap-1 text-lg md:text-2xl justify-center  md:justify-start md:mx-36 mt-5 
+                       text-orange-500 
+                     transition-all duration-300 delay-100 ease-in-out`}
+                  >
+                    <span> {`<`} </span>
+                    <div className="Agustina capitalize">
+                      nischal karki chhetri
+                    </div>
+                    <span>{`/>`}</span>
+                  </div>
+                </div>
+                <div
+                  className={`lg:hidden block gap-4 mt-12 w-full  capitalize text-lg font-medium  items-center justify-center`}
+                >
+                  {NavData.map((val, i) => {
+                    return (
+                      <div key={i} className="w-full  ">
+                        <Link href={val?.path}>
+                          <ScrollTo selector={`${val.id}`}>
+                            {" "}
+                            <div
+                              className={` my-2 px-6 mx-auto duration-700 delay-200 cursor-pointer py-4  border-b hover:text-white hover:bg-[#d6d6d6] w-[98%] `}
+                              onClick={() => setShowSidebar(false)}
+                            >
+                              {val.title}
+                            </div>
+                          </ScrollTo>
+                        </Link>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div
+                  className={` ${
+                    DarkTheme ? "bg-orange-500" : "bg-[#e0e0e0]"
+                  } w-20  m-5 px-2 py-1 rounded-3xl `}
+                  onClick={() => {
+                    Theme(), setShowSidebar(false);
+                  }}
+                >
+                  <div
+                    className={` flex  ${
+                      DarkTheme ? "justify-end " : "justify-start "
+                    } cursor-pointer`}
+                  >
+                    {DarkTheme ? (
+                      <FaCircle className="text-white " />
+                    ) : (
+                      <FaCircle className="text-black  " />
+                    )}
+                  </div>
+                </div>
+                <div className="border-b"></div>
+              </div>
+            </div>
+            <div
+              className={`${
+                showSidebar
+                  ? "flex absolute col-span-3 top-3 w-full z-50 left-2"
+                  : "hidden"
+              } ''`}
+            >
+              <button onClick={() => setShowSidebar(false)}>
+                <MdClose className="text-black  text-[35px] p-1 bg-white rounded-full" />
+              </button>
+            </div>
           </div>
         </div>
-      </div> */}
       </div>
     </>
   );

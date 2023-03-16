@@ -49,10 +49,10 @@ function Contact() {
   ];
   return (
     <div id="contactMe">
-      <div className="text-4xl  w-[63%] flex justify-end pt-32 font-bold uppercase">
+      <div className="text-2xl  md:text-4xl  w-[63%] flex md:justify-end pt-32 font-bold uppercase">
         contact me
       </div>
-      <div className="grid  grid-cols-12 gap-20 pt-7 ">
+      <div className="md:grid  grid-cols-12 gap-20 -mt-7 md:mt-0 md:pt-7 ">
         <div
           className="col-span-6  h-96 overflow-hidden w-full "
           // data-aos="fade-up-right"
@@ -63,7 +63,7 @@ function Contact() {
               height={100}
               width={600}
               quality={100}
-              className="h-[fit] -mt-[4.5rem]  w-full"
+              className="h mt-[6rem] md:-mt-[4.5rem]  w-full"
             />
           </Fade>
         </div>
@@ -72,7 +72,7 @@ function Contact() {
             {whatIDo.map((val, i) => {
               return (
                 <div key={i}>
-                  <div className="my-5  uppercase text-[18.5px] w-11/12">
+                  <div className="my-5  uppercase  text-base md:text-[18.5px] w-11/12">
                     {val.description}
                   </div>
 
@@ -81,10 +81,10 @@ function Contact() {
                       return (
                         <div key={i} className="">
                           <div
-                            className={`text-[17px] 
+                            className={`text-[13px] md:text-[17px] 
                            `}
                           >
-                            {/* text-[#7e7e7e] */}⚡{value.point}
+                            ⚡{value.point}
                           </div>
                         </div>
                       );
@@ -97,7 +97,7 @@ function Contact() {
         </Fade>
       </div>{" "}
       <Fade zoom>
-        <div className="grid  grid-cols-12 gap-20 pb-14 ">
+        <div className="md:grid  grid-cols-12 gap-20 md:pb-14 ">
           <div className="col-span-6  flex flex-col justify-center">
             <div className=" my-5 text-center ">
               <div className="text-3xl  font-bold font-serif  uppercase ">
@@ -111,20 +111,20 @@ function Contact() {
               <div className=" text-3xl font-serif font-bold uppercase">
                 phone
               </div>
-              <div className="text-lg capitalize font- my-2">
+              <div className="text-lg capitalize  my-2">
                 {" "}
                 +977-9817554983, 9803759335
               </div>
             </div>
           </div>
-          <div className="col-span-6  h-96 overflow-hidden w-full ">
+          <div className="col-span-6  md:h-96 overflow-hidden w-full ">
             <Fade left>
               <Image
                 src={image}
                 height={100}
                 width={600}
                 quality={100}
-                className="h-[fit] -mt-[30rem]  w-full"
+                className="h-[fit] -mt-[15rem] md:-mt-[30rem]  w-full"
               />
             </Fade>
           </div>

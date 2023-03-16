@@ -59,13 +59,13 @@ function Experience({ DarkTheme, id }) {
   ];
   return (
     <div className=" pt-24   " id="work">
-      <div className="text-4xl font-bold">
+      <div className="text-2xl md:text-4xl font-bold">
         Education & work Experience Career
       </div>
-      <div className="grid  grid-cols-12 gap-20 pt-7 pb-14">
+      <div className="md:grid  grid-cols-12  place-items-center gap-10 pt-7 pb-14">
         <div className="col-span-6">
           <Fade bottom>
-            <div className="border-2 my-10 mb-16 text-2xl px-8 py-2 w-fit mx-auto border-green-500">
+            <div className="border-2 my-10 mb-16 text-2xl px-8 py-2 w-fit md:mx-auto border-orange-500">
               Education
             </div>
           </Fade>
@@ -73,7 +73,7 @@ function Experience({ DarkTheme, id }) {
             <div className="my-6">
               {education.map((val, i) => {
                 return (
-                  <div key={i} className="grid grid-cols-12 my-7">
+                  <div key={i} className="md:grid  grid-cols-12 my-7">
                     <div className=" col-span-5">
                       <div className="flex gap-3 items-end border-b w-[97%] pb-2">
                         <div className="capitalize text-lg font-bold">
@@ -84,7 +84,7 @@ function Experience({ DarkTheme, id }) {
                           to <div className="text-base ">{val.to}</div>
                         </div>
                       </div>
-                      <div className="text-lg mt-5 font-bold uppercase ">
+                      <div className="md:text-lg mt-5 font-bold uppercase ">
                         {val.degree}
                       </div>
                       <div className="text-xs mt-1 capitalize font-black border-b w-[97%] pb-2 ">
@@ -94,9 +94,15 @@ function Experience({ DarkTheme, id }) {
                         {val.university_name}
                       </div>
                     </div>
-                    <div className="col-span-7  flex gap-5 ">
+                    <div className="col-span-7  md:flex gap-5 ">
                       <div className="h-full w-[1px] bg-gray-400 "></div>
-                      <div className="">{val.description}</div>
+                      <div className="">
+                        <div className="w-full h-[1px] md:hidden bg-gray-200 my-5"></div>
+
+                        <div className="font-bold text-lg">Information: </div>
+                        <div>{val.description}</div>
+                        <div className="w-full h-[1px] md:hidden bg-gray-200 my-5"></div>
+                      </div>
                     </div>
                   </div>
                 );
@@ -105,7 +111,20 @@ function Experience({ DarkTheme, id }) {
           </Fade>
         </div>
         <Fade right>
-          <div className="col-span-6  h-fit    w-[700px]">
+          <div className="col-span-6  h-fit   md:w-[700px]">
+            <Image
+              src={image}
+              height={100}
+              width={600}
+              className="h-[400px] md:h-[500px] w-full object-cover object-center"
+            />
+          </div>
+        </Fade>
+      </div>
+
+      <div className="  md:grid  grid-cols-12 place-items-center  gap-20  ">
+        <Fade left>
+          <div className="col-span-6  h-fit md:block  hidden   w-[700px]">
             <Image
               src={image}
               height={100}
@@ -114,31 +133,9 @@ function Experience({ DarkTheme, id }) {
             />
           </div>
         </Fade>
-      </div>
-
-      <div className="grid  grid-cols-12 gap-20 pt-14">
-        <Fade left>
-          <div className="col-span-6  h-fit    w-[700px]">
-            {DarkTheme ? (
-              <Image
-                src={image1}
-                height={100}
-                width={600}
-                className="h-[500px] w-full"
-              />
-            ) : (
-              <Image
-                src={image}
-                height={100}
-                width={600}
-                className="h-[500px] w-full"
-              />
-            )}
-          </div>
-        </Fade>
         <div className="col-span-6">
           <Fade top>
-            <div className="border-2 text-2xl px-8 py-2 w-fit my-10 mb-16  mx-auto border-green-500">
+            <div className="border-2 text-2xl px-8 py-2 w-fit my-10 mb-16  md:mx-auto border-orange-500">
               Experience
             </div>
           </Fade>
@@ -146,11 +143,7 @@ function Experience({ DarkTheme, id }) {
             <div className="my-6">
               {education.map((val, i) => {
                 return (
-                  <div key={i} className="grid grid-cols-12 my-7">
-                    <div className="col-span-7  flex gap-5 ">
-                      <div className="">{val.description}</div>
-                      <div className="h-full w-[1px] bg-gray-400  mr-4"></div>
-                    </div>
+                  <div key={i} className="md:grid  grid-cols-12 my-7">
                     <div className=" col-span-5">
                       <div className="flex gap-3 items-end border-b w-[97%] pb-2">
                         <div className="capitalize text-lg font-bold">
@@ -161,7 +154,7 @@ function Experience({ DarkTheme, id }) {
                           to <div className="text-base ">{val.to}</div>
                         </div>
                       </div>
-                      <div className="text-lg mt-5 font-bold uppercase ">
+                      <div className="md:text-lg mt-5 font-bold uppercase ">
                         {val.degree}
                       </div>
                       <div className="text-xs mt-1 capitalize font-black border-b w-[97%] pb-2 ">
@@ -171,12 +164,32 @@ function Experience({ DarkTheme, id }) {
                         {val.university_name}
                       </div>
                     </div>
+                    <div className="col-span-7  md:flex gap-5 ">
+                      <div className="h-full w-[1px] bg-gray-400 "></div>
+                      <div className="">
+                        <div className="w-full h-[1px] md:hidden bg-gray-200 my-5"></div>
+
+                        <div className="font-bold text-lg">Information: </div>
+                        <div>{val.description}</div>
+                        <div className="w-full h-[1px] md:hidden bg-gray-200 my-5"></div>
+                      </div>
+                    </div>
                   </div>
                 );
               })}
             </div>
           </Fade>
         </div>
+        <Fade left>
+          <div className="col-span-6  h-fit md:hidden block   md:w-[700px]">
+            <Image
+              src={image}
+              height={100}
+              width={600}
+              className="h-[400px] md:h-[500px] w-full object-cover object-center"
+            />
+          </div>
+        </Fade>
       </div>
     </div>
   );

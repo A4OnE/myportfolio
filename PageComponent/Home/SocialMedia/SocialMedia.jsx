@@ -57,7 +57,8 @@ function SocialMedia() {
           <FaInstagram
             size={40}
             round
-            className="hover:scale-110  transition-all ease-in-out duration-300 hover:opacity-80  rounded w-8 h-8"
+            style={{ color: "hsl(15,100%,50%)" }}
+            className="hover:scale-110   transition-all  ease-in-out duration-300 hover:opacity-80  rounded w-8 h-8"
           />
         </Link>
       </div>

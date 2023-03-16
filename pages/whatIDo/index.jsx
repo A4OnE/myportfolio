@@ -63,61 +63,68 @@ function WhatIDo() {
   ];
   return (
     <div id="skills">
-      <div className="text-4xl  w-[63%] flex justify-end pt-24 font-bold uppercase">
+      <div className="text-2xl md:text-4xl  md:w-[66%] flex md:justify-end pt-24 font-bold uppercase">
         what i do
       </div>
 
-      <div className="grid  grid-cols-12 gap-20 pt-7 pb-14">
-        <div
-          className="col-span-6 h-fit w-full "
-          // data-aos="fade-up-right"
-        >
+      <div className="md:grid  grid-cols-12 md:gap-20 pt-7 md:pb-14">
+        <div className="col-span-6 h-fit w-full  ">
           <Fade left>
             <Image
               src={image}
               height={100}
               width={600}
               quality={100}
-              className="h-[620px] w-full"
+              className=" h-[350px] md:h-[620px] w-full"
             />
           </Fade>
         </div>
-        <Fade right>
-          <div className="col-span-6 flex justify-end ">
-            {whatIDo.map((val, i) => {
-              return (
-                <div key={i}>
-                  <div className="my-5   text-[18.5px] w-11/12">
-                    {val.description}
-                  </div>
+        <div className="col-span-6 md:flex justify-end ">
+          <Fade right>
+            <div>
+              {whatIDo.map((val, i) => {
+                return (
+                  <div key={i}>
+                    <div className=" mb-6  md:my-6  text-base md:text-[18.5px] w-11/12">
+                      {val.description}
+                    </div>
 
-                  <div className="flex gap-5">
-                    {val.icons.map((vals, i) => {
-                      return (
-                        <div key={i} className="hover:text-[rgb(255,165,0)]">
-                          <div className="text-6xl ">{vals.icon}</div>
-                          <div className="text-[16px]">{vals.name}</div>
-                        </div>
-                      );
-                    })}
+                    <div className="flex flex-wrap gap-5">
+                      {val.icons.map((vals, i) => {
+                        return (
+                          <div key={i} className="hover:text-[rgb(255,165,0)]">
+                            <div className=" text-4xl md:text-6xl ">
+                              {vals.icon}
+                            </div>
+                            <div className=" text-[11px] md:text-[16px]">
+                              {vals.name}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className="flex flex-col my-8 gap-5">
+                      {val.points.map((value, i) => {
+                        return (
+                          <div key={i} className="">
+                            <div className={` text-[13px] md:text-[17px]  `}>
+                              ⚡{value.point}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
-                  <div className="flex flex-col my-8 gap-5">
-                    {val.points.map((value, i) => {
-                      return (
-                        <div key={i} className="">
-                          <div className={`text-[17px]  `}>⚡{value.point}</div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </Fade>
+                );
+              })}
+            </div>
+          </Fade>
+        </div>
       </div>
-      <div className=" w-full  ">
-        <div className="text-4xl font-bold mb-5 uppercase">my skills</div>
+      <div className="w-[90%] md:w-full  ">
+        <div className="text-2xl md:text-4xl font-bold mt-14 md:mt-0  md:mb-5 uppercase">
+          my skills
+        </div>
         <Fade bottom big>
           <div className="flex flex-col relative uppercase  gap-3">
             <div className="mt-6  text-lg font-medium">html</div>

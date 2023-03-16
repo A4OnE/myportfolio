@@ -9,6 +9,8 @@ import { Fade } from "react-reveal";
 import TopBar from "../Navigation/TopBar/TopBar";
 import Contact from "../contact";
 import Project from "../project";
+import Footer from "../../HOC/Footer/Footer";
+import ScrollIntoView from "react-scroll-into-view";
 // import { useRouter } from "next/router";
 function Home() {
   const [ID, setID] = useState("");
@@ -16,7 +18,7 @@ function Home() {
     {
       title: "Hello, I'm Nischal Karki",
       description:
-        "A passionate Front-End Software Developer  having an experience of building Web and Mobile applications with (React)/(Next) and some other cool libraries and frameworks.",
+        "A passionate Front-End Software Developer  having an experience of building cool Web Sites and Web applications with (React)/(Next) and some other awesome libraries and frameworks.",
       image: img,
     },
   ];
@@ -30,47 +32,47 @@ function Home() {
 
   return (
     <Layout>
-      <div
-      //   className={`${ID ? "text-white bg-black" : "text-black bg-white"}`}
-      >
-        <div className="p-14 ">
-          <div className=" py-10 h-[600px]">
-            <div>
-              {myIntroduction.map((val, i) => {
-                return (
-                  <div key={i} className="grid grid-cols-12 ">
-                    <div className="  mt-14 col-span-8">
-                      <Fade bottom>
-                        <div className="text-6xl font-bold">{val.title}</div>
-                        <div className="mt-8 text-[32px]   font-medium  w-10/12">
-                          {val.description}
-                        </div>
-                      </Fade>
-                    </div>
-                    <Fade left>
-                      <div className="col-span-4  h-full">
-                        <Image
-                          src={val.image}
-                          height={100}
-                          width={600}
-                          className="h-[350px] w-full"
-                        />
+      <div className="px-4 pt-5 pb-5 md:px-14  overflow-hidden   md:pt-14 md:pb-8  h-full">
+        <div className=" py-10 h-[600px]">
+          <div className="md:mt-8">
+            {myIntroduction.map((val, i) => {
+              return (
+                <div key={i} className="md:grid grid-cols-12 ">
+                  <div className="  md:mt-14 col-span-8">
+                    <Fade bottom>
+                      <div className=" text-3xl md:text-6xl font-bold">
+                        {val.title}
+                      </div>
+                      <div className="mt-8 md:text-[32px]   font-medium  md:w-10/12">
+                        {val.description}
                       </div>
                     </Fade>
                   </div>
-                );
-              })}
-            </div>
+                  <Fade left>
+                    <div className="col-span-4  h-full">
+                      <Image
+                        src={val.image}
+                        height={100}
+                        width={600}
+                        className="md:h-[350px] w-full"
+                      />
+                    </div>
+                  </Fade>
+                </div>
+              );
+            })}
+          </div>
 
-            <Fade left>
-              <div className="mt-5">
-                <SocialMedia />
-              </div>
-            </Fade>
-            <Fade duration={2000} left>
-              <div className="flex gap-8 mt-8 text-white   ">
-                <div>
-                  {" "}
+          <Fade left>
+            <div className="mt-5">
+              <SocialMedia />
+            </div>
+          </Fade>
+          <Fade duration={2000} left>
+            <div className="flex gap-8 mt-8 text-white   ">
+              <div>
+                {" "}
+                <ScrollIntoView selector="#contactMe">
                   <button
                     className="bg-gray-700 px-6 py-3 capitalize
                text-lg font-semibold hover:bg-opacity-80 rounded-[4px]
@@ -78,27 +80,30 @@ function Home() {
                   >
                     contact me
                   </button>
-                </div>
-                <div>
-                  {" "}
-                  <button
-                    className="bg-gray-700 px-6 py-3 capitalize 
+                </ScrollIntoView>
+              </div>
+              <div>
+                {" "}
+                <button
+                  className="bg-gray-700 px-6 py-3 capitalize 
               text-lg font-semibold hover:bg-opacity-80 rounded-[4px]
               transition-all ease-in-out duration-300 delay-100"
-                  >
-                    visit my profile
-                  </button>
-                </div>
+                >
+                  visit my profile
+                </button>
               </div>
-            </Fade>
-          </div>
-          <div>
-            <WhatIDo />
-            <Experience />
-            <Project />
-            <Contact />
-          </div>
+            </div>
+          </Fade>
         </div>
+        <div>
+          <WhatIDo />
+          <Experience />
+          <Project />
+          <Contact />
+        </div>
+      </div>
+      <div className="">
+        <Footer />
       </div>
     </Layout>
   );

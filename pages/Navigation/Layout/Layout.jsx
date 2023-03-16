@@ -15,7 +15,9 @@ function Layout({ children }) {
       <TopBar DarkTheme={DarkTheme} Theme={Theme} />
       <div
         className={`${
-          DarkTheme ? "bg-[#171C28] text-orange-500" : "bg-[#ECF9FF] text-black"
+          DarkTheme
+            ? "bg-[#171C28] text-white md:text-orange-500"
+            : "bg-[#ECF9FF] text-black"
         } transition-all ease-in-out duration-300 delay-100`}
       >
         {children}
