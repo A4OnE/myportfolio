@@ -6,7 +6,7 @@ import hi from "../../UI/Resources/Image/hi.gif";
 import SocialMedia from "../../PageComponent/Home/SocialMedia/SocialMedia";
 import Experience from "../experience";
 import WhatIDo from "../whatIDo";
-import { Fade } from "react-reveal";
+import { Slide, Fade, Zoom } from "react-awesome-reveal";
 import TopBar from "../Navigation/TopBar/TopBar";
 import Contact from "../contact";
 import Project from "../project";
@@ -14,15 +14,23 @@ import Footer from "../../HOC/Footer/Footer";
 import ScrollIntoView from "react-scroll-into-view";
 // import { useRouter } from "next/router";
 function Home() {
-  const [ID, setID] = useState("");
+  // const [slide, setSlide] = useState(false);
   const myIntroduction = [
     {
-      title: "Hello, I'm Nischal Karki",
       description:
         "A passionate Front-End Software Developer  having an experience of building cool Web Sites and Web applications with (React)/(Next) and some other awesome libraries and frameworks.",
       image: img,
     },
   ];
+  // useEffect(() => {
+  //   const interval = setTimeout(() => {
+  //     setSlide(!slide);
+  //   }, 6000);
+  //   return () => {
+  //     clearTimeout(interval);
+  //   };
+  // }, []);
+
   //   const router = useRouter();
   //   useEffect(() => {
   //     if (router.isReady) {
@@ -40,52 +48,69 @@ function Home() {
               return (
                 <div key={i} className="md:grid grid-cols-12 ">
                   <div className="  md:mt-14 col-span-8">
-                    <Fade bottom>
-                      <div className=" flex gap-2 items-center">
-                        <div className="text-[28px] md:text-6xl font-bold">
-                          {" "}
-                          {val.title}
-                        </div>
-                        <div className=" h-12 md:h-66px">
-                          <Image
-                            src={hi}
-                            // placeholder="blur"
-                            //   srcSet={`${val.image} 2x, ${val.image} 600vw`}
-                            //   blurDataURL={val.image}
-                            // priority
-                            alt={"loading ..."}
-                            height={"100%"}
-                            width={"100%"}
-                            className="w-full h-12  md:h-[66px]    object-contain "
-                          />
-                        </div>
+                    {/* <Slide delay={1e3} cascade damping={1e-1}> */}
+                    <div className=" flex gap-2 items-center">
+                      <div className="text-[28px] lg:text-5xl typeWriter  font-bold">
+                        <Fade triggerOnce delay={1e3} cascade damping={0.1}>
+                          {`  Hello,I'm Nischal Karki`}
+                        </Fade>
                       </div>
+                      <div className=" h-12 md:h-66px">
+                        <Fade triggerOnce delay={3.3e3} cascade damping={1e-1}>
+                          <div>
+                            {" "}
+                            <Image
+                              src={hi}
+                              // placeholder="blur"
+                              //   srcSet={`${val.image} 2x, ${val.image} 600vw`}
+                              //   blurDataURL={val.image}
+                              // priority
+                              alt={"loading ..."}
+                              height={"100%"}
+                              width={"100%"}
+                              className="w-full h-12  md:h-[66px]    object-contain "
+                            />
+                          </div>
+                        </Fade>
+                      </div>
+                    </div>
+                    {/* </Slide> */}
+                    <Slide delay={3e3} triggerOnce cascade damping={1e-1}>
                       <div className="mt-8 md:text-[32px]   font-medium  md:w-10/12">
                         {val.description}
                       </div>
-                    </Fade>
+                    </Slide>
                   </div>
-                  <Fade left>
-                    <div className="col-span-4  h-full">
-                      <Image
-                        src={val.image}
-                        height={100}
-                        width={600}
-                        className="md:h-[350px] w-full"
-                      />
+                  <Slide
+                    direction="left"
+                    triggerOnce
+                    delay={3.5e3}
+                    cascade
+                    damping={1e-1}
+                  >
+                    <div className="col-span-4 w-[350px]  h-full">
+                      <Zoom triggerOnce delay={3.5e3} cascade damping={1e-1}>
+                        <Image
+                          src={val.image}
+                          alt={"loading ..."}
+                          height={100}
+                          width={600}
+                          className="md:h-[350px] w-[full]"
+                        />
+                      </Zoom>
                     </div>
-                  </Fade>
+                  </Slide>
                 </div>
               );
             })}
           </div>
 
-          <Fade left>
+          <Slide triggerOnce delay={3.5e3} cascade damping={1e-1}>
             <div className="mt-5">
               <SocialMedia />
             </div>
-          </Fade>
-          <Fade duration={2000} left>
+          </Slide>
+          <Slide triggerOnce delay={4e3} cascade damping={1e-1}>
             <div className="flex gap-8 mt-8 text-white   ">
               <div>
                 {" "}
@@ -110,7 +135,7 @@ function Home() {
                 </button>
               </div>
             </div>
-          </Fade>
+          </Slide>
         </div>
         <div>
           <WhatIDo />
@@ -121,7 +146,8 @@ function Home() {
       </div>
 
       <div className="">
-        <Footer />
+        {" "}
+        <Footer />{" "}
       </div>
     </Layout>
   );

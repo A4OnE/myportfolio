@@ -7,8 +7,7 @@ import { FaSass, FaReact, FaNpm } from "react-icons/fa";
 import img from "../../UI/Resources/Image/kitty.gif";
 import Image from "next/image";
 import image from "../../UI/Resources/Image/left.png";
-import Fade from "react-reveal/Fade";
-import Reveal from "react-reveal/Reveal";
+import { Slide, Zoom } from "react-awesome-reveal";
 import { useRouter } from "next/router";
 
 function WhatIDo() {
@@ -69,18 +68,19 @@ function WhatIDo() {
 
       <div className="md:grid  grid-cols-12 md:gap-20 pt-7 md:pb-14">
         <div className="col-span-6 h-fit w-full  md:-mt-16 md:my-0  ">
-          <Fade left>
+          <Slide direction="left" triggerOnce cascade damping={1e-1}>
             <Image
               src={image}
               height={100}
+              alt={""}
               width={600}
               quality={100}
               className="  md:h-[620px] object-cover w-full "
             />
-          </Fade>
+          </Slide>
         </div>
         <div className="col-span-6 md:flex justify-end ">
-          <Fade right>
+          <Slide direction="right" triggerOnce cascade damping={1e-1}>
             <div>
               {whatIDo.map((val, i) => {
                 return (
@@ -118,14 +118,14 @@ function WhatIDo() {
                 );
               })}
             </div>
-          </Fade>
+          </Slide>
         </div>
       </div>
       <div className="w-[90%] md:w-[95%]  ">
         <div className="text-2xl md:text-4xl font-bold mt-14 md:mt-0  md:mb-5 uppercase">
           my skills
         </div>
-        <Fade bottom big>
+        <Zoom direction="top">
           <div className="flex flex-col relative uppercase  gap-3">
             <div className="mt-6  text-lg font-medium">html</div>
             <div className="w-full">
@@ -215,7 +215,7 @@ function WhatIDo() {
               </div>
             </div>
           </div>
-        </Fade>
+        </Zoom>
       </div>
     </div>
   );

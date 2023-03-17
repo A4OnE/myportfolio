@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { NavData } from "../Navdata";
+import { NavData } from "../../../HOC/AdditionalInformation/Navdata";
 import { useRouter } from "next/router";
-import LOGO from "../../../UI/Resources/Image/slider.jpg";
+// import LOGO from "../../../UI/Resources/Image/slider.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -18,7 +18,7 @@ import img from "../../../UI/Resources/Image/hiccup.gif";
 import SocialMedia from "../../../PageComponent/Home/SocialMedia/SocialMedia";
 import Experience from "../../experience";
 import WhatIDo from "../../whatIDo";
-import { Fade } from "react-reveal";
+import { Fade, Zoom } from "react-awesome-reveal";
 // import TopBar from "../Navigation/TopBar/TopBar";
 import ScrollTo from "react-scroll-into-view";
 function TopBar({ DarkTheme, Theme }) {
@@ -59,70 +59,72 @@ function TopBar({ DarkTheme, Theme }) {
           DarkTheme ? "text-white bg-[#171C28]" : "text-black bg-[#ECF9FF]"
         } h-20 flex justify-center items-center px-4 transition-all duration-300 delay-100 ease-in-out `}
       >
-        <div
-          onClick={() => scrollToTop()}
-          className={`${
-            imageHeight ? "block" : " hidden"
-          } fixed bottom-5 right-5 bg-[#464546] shadow-md cursor-pointer shadow-[#8f8f8f] z-[1000] rounded-full text-white`}
-        >
-          <MdKeyboardArrowUp className="h-11 w-11 p-1" />
-        </div>
-        <div className="w-full" onClick={() => router.reload()}>
-          <Link href={"/"} passHref>
-            <div
-              className={`flex md:gap-5 text-lg md:text-2xl   justify-start md:mx-36 mt-5 ${
-                DarkTheme ? "text-white" : "text-orange-500 "
-              } transition-all duration-300 delay-100 ease-in-out`}
-            >
-              <span> {`<`} </span>
-              <div className="Agustina capitalize">nischal karki chhetri</div>
-              <span>{`/>`}</span>
-            </div>
-          </Link>
-        </div>
-
-        <div
-          className={`hidden lg:flex gap-4 px-5  capitalize text-xl  w-full items-center justify-end`}
-        >
-          {NavData.map((val, i) => {
-            return (
-              <Link
-                href={val.path}
-                className="flex gap-2  items-center"
-                key={i}
+        <Fade triggerOnce cascade duration={1200}>
+          <div
+            onClick={() => scrollToTop()}
+            className={`${
+              imageHeight ? "block" : " hidden "
+            } fixed bottom-20 right-5 bg-[#464546] shadow-md cursor-pointer shadow-[#8f8f8f] z-[1000] rounded-full text-white`}
+          >
+            <MdKeyboardArrowUp className="h-11 w-11 p-1" />
+          </div>
+          <div className="w-full" onClick={() => router.reload()}>
+            <Link href={"/"} passHref>
+              <div
+                className={`flex md:gap-5 text-lg md:text-2xl   justify-start md:mx-36 mt-5 ${
+                  DarkTheme ? "text-white" : "text-orange-500 "
+                } transition-all duration-300 delay-100 ease-in-out`}
               >
-                <div
-                  className={`hover:scale-105 Raleway 
+                <span> {`<`} </span>
+                <div className="Agustina capitalize">nischal karki chhetri</div>
+                <span>{`/>`}</span>
+              </div>
+            </Link>
+          </div>
+
+          <div
+            className={`hidden lg:flex gap-4 px-5  capitalize text-xl  w-full items-center justify-end`}
+          >
+            {NavData.map((val, i) => {
+              return (
+                <Link
+                  href={val.path}
+                  className="flex gap-2  items-center"
+                  key={i}
+                >
+                  <div
+                    className={`hover:scale-105 Raleway 
                     cursor-pointer px-4 py-2 ${
                       DarkTheme
                         ? "hover:bg-orange-500 hover:text-white  "
                         : "hover:bg-[#e0e0e0]"
                     } `}
-                >
-                  <ScrollTo selector={`${val.id}`}>{val.title}</ScrollTo>
-                </div>
-              </Link>
-            );
-          })}
-          <div
-            className={` ${
-              DarkTheme ? "bg-orange-500" : "bg-[#e0e0e0]"
-            } w-20 px-2 py-1 rounded-3xl`}
-            onClick={() => Theme()}
-          >
+                  >
+                    <ScrollTo selector={`${val.id}`}>{val.title}</ScrollTo>
+                  </div>
+                </Link>
+              );
+            })}
             <div
-              className={` flex  ${
-                DarkTheme ? "justify-end " : "justify-start "
-              } cursor-pointer`}
+              className={` ${
+                DarkTheme ? "bg-orange-500" : "bg-[#e0e0e0]"
+              } w-20 px-2 py-1 rounded-3xl`}
+              onClick={() => Theme()}
             >
-              {DarkTheme ? (
-                <FaCircle className="text-white " />
-              ) : (
-                <FaCircle className="text-black  " />
-              )}
+              <div
+                className={` flex  ${
+                  DarkTheme ? "justify-end " : "justify-start "
+                } cursor-pointer`}
+              >
+                {DarkTheme ? (
+                  <FaCircle className="text-white " />
+                ) : (
+                  <FaCircle className="text-black  " />
+                )}
+              </div>
             </div>
           </div>
-        </div>
+        </Fade>
         {/* mobile device */}
         <div className="flex flex-1 h-full items-center absolute right-6 lg:hidden text-black   justify-end">
           <button onClick={() => setShowSidebar(true)}>
