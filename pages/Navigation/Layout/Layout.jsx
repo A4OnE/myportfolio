@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "../../../HOC/Footer/Footer";
 import TopBar from "../TopBar/TopBar";
 
 function Layout({ children }) {
@@ -16,11 +17,20 @@ function Layout({ children }) {
       <div
         className={`${
           DarkTheme
-            ? "bg-[#171C28] text-white md:text-[#ACACAC]"
+            ? "bg-[#171C28] text-white  md:text-[#ACACAC]"
             : "bg-[#ECF9FF] text-[black]"
-        } transition-all ease-in-out duration-300 delay-100`}
+        }  relative -z-10 transition-all ease-in-out duration-300 delay-100`}
       >
         {children}
+      </div>
+
+      <div
+        className={`${
+          DarkTheme ? "bg-[#1F2937]  text-white" : " bg-[#111827] text-white  "
+        } relative -z-10 `}
+      >
+        {" "}
+        <Footer />{" "}
       </div>
     </div>
   );

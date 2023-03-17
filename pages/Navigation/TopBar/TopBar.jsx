@@ -18,9 +18,10 @@ import img from "../../../UI/Resources/Image/hiccup.gif";
 import SocialMedia from "../../../PageComponent/Home/SocialMedia/SocialMedia";
 import Experience from "../../experience";
 import WhatIDo from "../../whatIDo";
-import { Fade, Zoom } from "react-awesome-reveal";
+import { Fade, Slide, Zoom } from "react-awesome-reveal";
 // import TopBar from "../Navigation/TopBar/TopBar";
 import ScrollTo from "react-scroll-into-view";
+import Head from "next/head";
 function TopBar({ DarkTheme, Theme }) {
   const [imageHeight, setImageHeight] = useState(false);
   const [subNav, showSubNav] = useState(false);
@@ -52,6 +53,7 @@ function TopBar({ DarkTheme, Theme }) {
       image: img,
     },
   ];
+
   return (
     <>
       <div
@@ -59,12 +61,13 @@ function TopBar({ DarkTheme, Theme }) {
           DarkTheme ? "text-white bg-[#171C28]" : "text-black bg-[#ECF9FF]"
         } h-20 flex justify-center items-center px-4 transition-all duration-300 delay-100 ease-in-out `}
       >
-        <Fade triggerOnce cascade duration={1200}>
+        <Zoom triggerOnce duration={1000}>
           <div
             onClick={() => scrollToTop()}
             className={`${
               imageHeight ? "block" : " hidden "
-            } fixed bottom-20 right-5 bg-[#464546] shadow-md cursor-pointer shadow-[#8f8f8f] z-[1000] rounded-full text-white`}
+            } fixed bottom-20 right-5
+             bg-[#464546] shadow-md cursor-pointer shadow-[#8f8f8f] z-[1200] rounded-full text-white`}
           >
             <MdKeyboardArrowUp className="h-11 w-11 p-1" />
           </div>
@@ -92,16 +95,19 @@ function TopBar({ DarkTheme, Theme }) {
                   className="flex gap-2  items-center"
                   key={i}
                 >
-                  <div
-                    className={`hover:scale-105 Raleway 
+                  <ScrollTo selector={`${val.id}`}>
+                    {" "}
+                    <div
+                      className={`hover:scale-105 Raleway 
                     cursor-pointer px-4 py-2 ${
                       DarkTheme
                         ? "hover:bg-orange-500 hover:text-white  "
                         : "hover:bg-[#e0e0e0]"
                     } `}
-                  >
-                    <ScrollTo selector={`${val.id}`}>{val.title}</ScrollTo>
-                  </div>
+                    >
+                      {val.title}
+                    </div>
+                  </ScrollTo>
                 </Link>
               );
             })}
@@ -124,7 +130,7 @@ function TopBar({ DarkTheme, Theme }) {
               </div>
             </div>
           </div>
-        </Fade>
+        </Zoom>
         {/* mobile device */}
         <div className="flex flex-1 h-full items-center absolute right-6 lg:hidden text-black   justify-end">
           <button onClick={() => setShowSidebar(true)}>

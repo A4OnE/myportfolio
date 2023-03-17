@@ -82,12 +82,12 @@
   position: relative;
   color: hsl(0, 0%, 68%);
   font-weight: bold !important;
-  font-family: "Anonymous Pro", monospace !important;
+  font-family: "Raleway", monospace !important;
   letter-spacing: 5px !important;
   overflow: hidden;
   border-right: 2px solid hsl(0, 0%, 80%);
   white-space: nowrap;
-  animation: typewriter 4s steps(44) 1s 1 normal both,
+  animation: typewriter 4s steps(48) 1s 1 normal both,
     blinkTextCursor 500ms infinite;
 }
 @keyframes typewriter {
@@ -95,7 +95,7 @@
     width: 0;
   }
   to {
-    width: 900px;
+    width: 620px;
   }
 }
 @keyframes blinkTextCursor {

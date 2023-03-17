@@ -62,7 +62,7 @@ function WhatIDo() {
   ];
   return (
     <div id="skills">
-      <div className="text-2xl md:text-4xl  md:w-[66%] flex md:justify-end pt-24 font-bold uppercase">
+      <div className="text-2xl md:text-4xl  md:w-[66%] flex md:justify-end pt-10 md:pt-24 font-bold uppercase">
         what i do
       </div>
 
@@ -125,7 +125,7 @@ function WhatIDo() {
         <div className="text-2xl md:text-4xl font-bold mt-14 md:mt-0  md:mb-5 uppercase">
           my skills
         </div>
-        <Zoom direction="top">
+        <Zoom direction="top" triggerOnce>
           <div className="flex flex-col relative uppercase  gap-3">
             <div className="mt-6  text-lg font-medium">html</div>
             <div className="w-full">
