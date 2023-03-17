@@ -41,23 +41,24 @@ function Home() {
 
   return (
     <Layout>
-      <div className="px-4 pt-5 pb-5 md:px-14  overflow-hidden   md:pt-14 md:pb-8  h-full">
-        <div className=" py-10 md:h-[600px]">
+      <div className="px-4 pt-5 pb-5 md:px-14  overflow-hidden Raleway   md:pt-14 md:pb-8  h-full">
+        <div className=" pb-10 md:py-10 md:h-[600px]">
           <div className="md:mt-8">
             {myIntroduction.map((val, i) => {
               return (
-                <div key={i} className="md:grid grid-cols-12 ">
+                <div key={i} className="md:grid grid-cols-12 relative ">
                   <div className="  md:mt-14 col-span-8">
                     {/* <Slide delay={1e3} cascade damping={1e-1}> */}
-                    <div className=" flex gap-2 items-center">
-                      <div className="text-[20px] md:text-[28px]  w- lg:text-5xl lg:-mx-9 typeWriter  md:font-bold">
+                    <div className=" flex gap-2 items-center ">
+                      <div className="  md:text-[28px]  w- lg:text-5xl lg:-mx-9 typeWriter  md:font-bold">
+                        {" "}
                         <Fade triggerOnce delay={1e3} cascade damping={0.1}>
                           {`  Hello,I'm Nischal Karki`}
                         </Fade>
                       </div>
-                      <div className=" h-12 md:h-66px">
-                        <Fade triggerOnce delay={3.3e3} cascade damping={1e-1}>
-                          <div>
+                      <div className=" h-12 w-fit absolute left-[85%] md:top-10 md:right lg:left-[45%]  md:h-66px">
+                        <Fade triggerOnce delay={5e3} cascade damping={1e-1}>
+                          <div className=" ">
                             {" "}
                             <Image
                               src={hi}
@@ -100,7 +101,7 @@ function Home() {
                           alt={"loading ..."}
                           height={100}
                           width={600}
-                          className="md:h-[350px] w-[full]"
+                          className=" h-56 md:h-[350px] w-[full]"
                         />
                       </Zoom>
                     </div>
@@ -110,24 +111,28 @@ function Home() {
             })}
           </div>
 
-          <Slide triggerOnce delay={3.5e3} cascade damping={1e-1}>
+          <Fade
+            direction="left"
+            triggerOnce
+            delay={3.5e3}
+            cascade
+            damping={1e-1}
+          >
             <div className="mt-5">
               <SocialMedia />
             </div>
-          </Slide>
-          <Fade direction="left" delay={4e3} triggerOnce>
-            <div className="flex gap-8 mt-8 text-white   ">
+            <div className="flex gap-8 mt-6 md:mt-8 text-white   ">
               <div>
                 {" "}
-                <ScrollIntoView selector="#contactMe">
-                  <button
-                    className="bg-gray-700 px-6 py-3 capitalize
+                {/* <ScrollIntoView selector="#contactMe"> */}
+                <button
+                  className="bg-gray-700 px-6 py-3 capitalize
                text-lg font-semibold hover:bg-opacity-80 rounded-[4px]
                 transition-all ease-in-out duration-300 delay-100 "
-                  >
-                    contact me
-                  </button>
-                </ScrollIntoView>
+                >
+                  contact me
+                </button>
+                {/* </ScrollIntoView> */}
               </div>
               <div>
                 {" "}
@@ -148,11 +153,6 @@ function Home() {
           <Project />
           <Contact />
         </div>
-      </div>
-
-      <div className="">
-        {" "}
-        <Footer />{" "}
       </div>
     </Layout>
   );

@@ -93,7 +93,7 @@ function Contact() {
           </Slide>
         </div>
       </div>{" "}
-      <Zoom>
+      <Zoom triggerOnce>
         <div className="md:grid  grid-cols-12 gap-20 md:pb-14 ">
           <div className="col-span-6  flex flex-col justify-center">
             <div className=" my-5 text-center ">

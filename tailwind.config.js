@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -10,6 +11,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    // fontFamily: {
+    //   Agustina: ["Agustina", "sans-serif"],
+    //   Raleway: ['"Raleway"', "sans-serif"], // Ensure fonts with spaces have " " surrounding it.
+    // },
   },
   plugins: [],
 };
