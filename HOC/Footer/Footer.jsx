@@ -29,19 +29,17 @@ function Footer() {
             </div>
             <div className="h-fit flex   items-center">
               <Fade triggerOnce delay={5e3} cascade damping={0.1}>
-                <div className="h-20 w-20">
-                  <Image
-                    src={kitty}
-                    // placeholder="blur"
-                    //   srcSet={`${val.image} 2x, ${val.image} 600vw`}
-                    //   blurDataURL={val.image}
-                    // priority
-                    alt={"loading ..."}
-                    height={"100%"}
-                    width={"100%"}
-                    className="w-full   h-fit    object-cover object-center "
-                  />
-                </div>
+                <Image
+                  src={kitty}
+                  // placeholder="blur"
+                  //   srcSet={`${val.image} 2x, ${val.image} 600vw`}
+                  //   blurDataURL={val.image}
+                  // priority
+                  alt={"loading ..."}
+                  height={"100%"}
+                  width={"100%"}
+                  className="w-full   h-fit    object-cover object-center "
+                />
               </Fade>
             </div>
           </div>
