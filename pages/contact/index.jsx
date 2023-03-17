@@ -7,8 +7,7 @@ import { FaSass, FaReact, FaNpm } from "react-icons/fa";
 import img from "../../UI/Resources/Image/kitty.gif";
 import Image from "next/image";
 import image from "../../UI/Resources/Image/BgRemovedContact.gif";
-import Fade from "react-reveal/Fade";
-import Reveal from "react-reveal/Reveal";
+import { Slide, Zoom } from "react-awesome-reveal";
 import { useRouter } from "next/router";
 function Contact() {
   // useEffect(() => {
@@ -49,26 +48,24 @@ function Contact() {
   ];
   return (
     <div id="contactMe">
-      <div className="text-2xl  md:text-4xl  w-[63%] flex md:justify-end pt-32 font-bold uppercase">
+      <div className="text-2xl  md:text-4xl  w-[69%] flex md:justify-end pt-32 font-bold uppercase">
         contact me
       </div>
       <div className="md:grid  grid-cols-12 gap-20 -mt-7 md:mt-0 md:pt-7 ">
-        <div
-          className="col-span-6  h-96 overflow-hidden w-full "
-          // data-aos="fade-up-right"
-        >
-          <Fade left>
+        <div className="col-span-6  h-96 overflow-hidden w-full ">
+          <Slide direction="left" triggerOnce cascade damping={1e-1}>
             <Image
               src={image}
               height={100}
               width={600}
+              alt={""}
               quality={100}
               className="h mt-[6rem] md:-mt-[4.5rem]  w-full"
             />
-          </Fade>
+          </Slide>
         </div>
-        <Fade right>
-          <div className="col-span-6 flex justify-end ">
+        <div className="col-span-6 flex justify-end ">
+          <Slide direction="right" triggerOnce cascade damping={1e-1}>
             {whatIDo.map((val, i) => {
               return (
                 <div key={i}>
@@ -93,10 +90,10 @@ function Contact() {
                 </div>
               );
             })}
-          </div>
-        </Fade>
+          </Slide>
+        </div>
       </div>{" "}
-      <Fade zoom>
+      <Zoom>
         <div className="md:grid  grid-cols-12 gap-20 md:pb-14 ">
           <div className="col-span-6  flex flex-col justify-center">
             <div className=" my-5 text-center ">
@@ -118,18 +115,19 @@ function Contact() {
             </div>
           </div>
           <div className="col-span-6  md:h-96 overflow-hidden w-full ">
-            <Fade left>
+            <Slide direction="left" triggerOnce cascade damping={1e-1}>
               <Image
                 src={image}
                 height={100}
                 width={600}
+                alt={""}
                 quality={100}
                 className="h-[fit] -mt-[15rem] md:-mt-[30rem]  w-full"
               />
-            </Fade>
+            </Slide>
           </div>
         </div>
-      </Fade>
+      </Zoom>
     </div>
   );
 }

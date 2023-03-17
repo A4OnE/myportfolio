@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Fade from "react-reveal/Fade";
+import { Slide } from "react-awesome-reveal";
 import image1 from "../../UI/Resources/Image/star.gif";
 import image from "../../UI/Resources/Image/designs.png";
 
@@ -66,12 +66,12 @@ NCIT, a pioneer private institution  providing engineering education in  Nepal, 
       </div>
       <div className="md:grid  grid-cols-12  place-items-center gap-10 pt-7 pb-14">
         <div className="col-span-6">
-          <Fade bottom>
+          <Slide direction="bottom" triggerOnce cascade damping={1e-1}>
             <div className="border-2 my-10 mb-16 text-2xl px-8 py-2 w-fit md:mx-auto border-orange-500">
               Education
             </div>
-          </Fade>
-          <Fade left>
+          </Slide>
+          <Slide direction="left" triggerOnce cascade damping={1e-1}>
             <div className="my-6">
               {education.map((val, i) => {
                 return (
@@ -112,38 +112,40 @@ NCIT, a pioneer private institution  providing engineering education in  Nepal, 
                 );
               })}
             </div>
-          </Fade>
+          </Slide>
         </div>
-        <Fade right>
-          <div className="col-span-6  h-fit   md:w-[700px]">
+        <div className="col-span-6  h-fit   md:w-[700px]">
+          <Slide direction="right" triggerOnce cascade damping={1e-1}>
             <Image
               src={image}
               height={100}
+              alt={""}
               width={600}
               className="h-[400px] md:h-[500px] w-full object-cover object-center"
             />
-          </div>
-        </Fade>
+          </Slide>
+        </div>
       </div>
 
       <div className="  md:grid  grid-cols-12 place-items-center  gap-20  ">
-        <Fade left>
-          <div className="col-span-6  h-fit md:block  hidden   w-[700px]">
+        <div className="col-span-6  h-fit md:block  hidden   w-[700px]">
+          <Slide direction="left" triggerOnce cascade damping={1e-1}>
             <Image
               src={image}
               height={100}
               width={600}
+              alt={"loading ..."}
               className="h-[500px] w-full"
             />
-          </div>
-        </Fade>
+          </Slide>
+        </div>
         <div className="col-span-6">
-          <Fade top>
+          <Slide direction="top" triggerOnce cascade damping={1e-1}>
             <div className="border-2 text-2xl px-8 py-2 w-fit my-10 mb-16  md:mx-auto border-orange-500">
               Experience
             </div>
-          </Fade>
-          <Fade right>
+          </Slide>
+          <Slide direction="right" triggerOnce cascade damping={1e-1}>
             <div className="my-6">
               {education.map((val, i) => {
                 return (
@@ -184,18 +186,19 @@ NCIT, a pioneer private institution  providing engineering education in  Nepal, 
                 );
               })}
             </div>
-          </Fade>
+          </Slide>
         </div>
-        <Fade left>
+        <Slide direction="left" triggerOnce cascade damping={1e-1}>
           <div className="col-span-6  h-fit md:hidden block   md:w-[700px]">
             <Image
               src={image}
               height={100}
               width={600}
+              alt={"loading ..."}
               className="h-[400px] md:h-[500px] w-full object-cover object-center"
             />
           </div>
-        </Fade>
+        </Slide>
       </div>
     </div>
   );
