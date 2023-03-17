@@ -121,7 +121,7 @@ function WhatIDo() {
           </Fade>
         </div>
       </div>
-      <div className="w-[90%] md:w-full  ">
+      <div className="w-[90%] md:w-[95%]  ">
         <div className="text-2xl md:text-4xl font-bold mt-14 md:mt-0  md:mb-5 uppercase">
           my skills
         </div>
