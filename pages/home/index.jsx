@@ -50,7 +50,7 @@ function Home() {
                   <div className="  md:mt-14 col-span-8">
                     {/* <Slide delay={1e3} cascade damping={1e-1}> */}
                     <div className=" flex gap-2 items-center">
-                      <div className="text-[28px] lg:text-5xl typeWriter  font-bold">
+                      <div className="text-[20px] md:text-[28px]  w- lg:text-5xl lg:-mx-9 typeWriter  md:font-bold">
                         <Fade triggerOnce delay={1e3} cascade damping={0.1}>
                           {`  Hello,I'm Nischal Karki`}
                         </Fade>
@@ -75,11 +75,16 @@ function Home() {
                       </div>
                     </div>
                     {/* </Slide> */}
-                    <Slide delay={3e3} triggerOnce cascade damping={1e-1}>
+                    <Fade
+                      direction="left"
+                      delay={3e3}
+                      triggerOnce
+                      damping={1e-1}
+                    >
                       <div className="mt-8 md:text-[32px]   font-medium  md:w-10/12">
                         {val.description}
                       </div>
-                    </Slide>
+                    </Fade>
                   </div>
                   <Slide
                     direction="left"
@@ -110,7 +115,7 @@ function Home() {
               <SocialMedia />
             </div>
           </Slide>
-          <Slide triggerOnce delay={4e3} cascade damping={1e-1}>
+          <Fade direction="left" delay={4e3} triggerOnce>
             <div className="flex gap-8 mt-8 text-white   ">
               <div>
                 {" "}
@@ -135,7 +140,7 @@ function Home() {
                 </button>
               </div>
             </div>
-          </Slide>
+          </Fade>
         </div>
         <div>
           <WhatIDo />
