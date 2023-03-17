@@ -1,16 +1,14 @@
 import React from "react";
-import {
-  TwitterShareButton,
-  TwitterIcon,
-  FacebookShareButton,
-  FacebookIcon,
-  WhatsappShareButton,
-  WhatsappIcon,
-  LinkedinShareButton,
-  LinkedinIcon,
-} from "next-share";
+
 import Link from "next/link";
-import { FaGit, FaGithub, FaInstagram } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaWhatsapp,
+} from "react-icons/fa";
 function SocialMedia() {
   return (
     <div className=" flex  gap-4  ">
@@ -19,10 +17,11 @@ function SocialMedia() {
       >
         <Link href={"https://www.facebook.com/Ninztex37"}>
           {" "}
-          <FacebookIcon
+          <FaFacebook
+            style={{ color: "#0000ff" }}
             size={40}
             round
-            className="hover:scale-110 transition-all ease-in-out duration-300 hover:opacity-80  rounded w-8 h-8"
+            className="  bg-white  rounded-full hover:scale-110 transition-all ease-in-out duration-300 hover:opacity-80   w-8 h-8"
           />
         </Link>
       </div>
@@ -30,9 +29,10 @@ function SocialMedia() {
         className={`  hover:scale-105 transition-all duration-300 ease-in-out  capitalize cursor-pointer `}
       >
         <Link href={"https://web.whatsapp.com/"}>
-          <WhatsappIcon
+          <FaWhatsapp
             size={40}
             round
+            style={{ color: "hsl(142,100%,50%)" }}
             className="hover:scale-110 transition-all ease-in-out duration-300 hover:opacity-80  rounded w-8 h-8"
           />
         </Link>
@@ -42,9 +42,10 @@ function SocialMedia() {
       >
         {" "}
         <Link href={"https://www.facebook.com/Ninztex37"}>
-          <TwitterIcon
+          <FaTwitter
             size={40}
             round
+            style={{ color: "hsl(187,93%,63%)" }}
             className="hover:scale-110 transition-all ease-in-out duration-300 hover:opacity-80  rounded w-8 h-8"
           />
         </Link>
@@ -70,7 +71,7 @@ function SocialMedia() {
           <FaGithub
             size={40}
             round
-            className="hover:scale-110 transition-all ease-in-out duration-300 hover:opacity-80  rounded w-8 h-8"
+            className="   hover:scale-110 transition-all ease-in-out duration-300 hover:opacity-80  rounded w-8 h-8"
           />
         </Link>
       </div>
@@ -79,10 +80,11 @@ function SocialMedia() {
       >
         {" "}
         <Link href={"https://www.facebook.com/Ninztex37"}>
-          <LinkedinIcon
+          <FaLinkedin
             size={40}
+            style={{ color: "#0177B5" }}
             round
-            className="hover:scale-110 transition-all ease-in-out duration-300 hover:opacity-80  rounded w-8 h-8"
+            className=" bg-white  hover:scale-110 transition-all ease-in-out duration-300 hover:opacity-80  rounded w-8 h-8"
           />
         </Link>
       </div>
