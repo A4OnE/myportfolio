@@ -10,10 +10,11 @@ function Footer() {
       <div>
         <Link href={"/"}>
           <div className=" h-10  flex justify-center items-center cursor-pointer mt-12  md:text-xl font-bold  Agustina">
-            <div className=" flex gap-4">
+            <div className=" flex gap-2 md:gap-4">
               <Fade triggerOnce delay={0e3} cascade damping={0.1}>
                 {" "}
-                <div>😈 🎃 😈</div>
+                <div className=" hidden md:block">😈 🎃 😈</div>
+                <div className=" block md:hidden">😈</div>
               </Fade>
               <div>
                 <Fade triggerOnce delay={1e3} cascade damping={0.1}>
@@ -22,12 +23,13 @@ function Footer() {
               </div>
               <Fade triggerOnce delay={4e3} cascade damping={0.1}>
                 {" "}
-                <div> 😈 🎃 😈</div>
+                <div className=" hidden md:block">😈 🎃 😈</div>
+                <div className=" block md:hidden">😈</div>
               </Fade>
             </div>
             <div className="h-fit flex   items-center">
               <Fade triggerOnce delay={5e3} cascade damping={0.1}>
-                <div>
+                <div className="h-20 w-20">
                   <Image
                     src={kitty}
                     // placeholder="blur"

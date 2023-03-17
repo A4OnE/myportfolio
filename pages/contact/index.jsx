@@ -6,7 +6,7 @@ import { TbBrandNextjs, TbBrandJavascript } from "react-icons/tb";
 import { FaSass, FaReact, FaNpm } from "react-icons/fa";
 import img from "../../UI/Resources/Image/kitty.gif";
 import Image from "next/image";
-import image from "../../UI/Resources/Image/kitty.gif";
+import image from "../../UI/Resources/Image/contact.gif";
 import { Slide, Zoom } from "react-awesome-reveal";
 import { useRouter } from "next/router";
 function Contact() {
