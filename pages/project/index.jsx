@@ -110,7 +110,7 @@ function Project({ value }) {
                 >
                   {/* <Link href={{router.push()}}> */}
                   <div className=" relative border-t bg-black shadow-md shadow-[#9d9898] ">
-                    <div className=" h-[250px]    ">
+                    <div className=" h-[200px]  md:h-[250px]  ">
                       <Image
                         src={val.image}
                         // placeholder="blur"
@@ -120,11 +120,11 @@ function Project({ value }) {
                         alt={"loading ..."}
                         height={"100%"}
                         width={"100%"}
-                        className="w-full h-[250px]    object-cover object-center "
+                        className="w-full h-[200px] md:h-[250px]    object-cover object-top md:object-center "
                       />
                       <div
                         className="
-                      //  hover:bg-gradient-to-b picsDelay w-full h-[250px] hover:from-[#69a1ab]
+                      //  hover:bg-gradient-to-b picsDelay w-full h-[200px] md:h-[250px] hover:from-[#69a1ab]
                       //    bg-gradient-to-t from-[#152a2e]
                       //   hover:opacity-70  absolute top-0 flex   justify-ceter items-center z-50 "
                       >

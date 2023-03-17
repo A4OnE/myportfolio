@@ -12,7 +12,8 @@ function Experience({ DarkTheme, id }) {
       university_name: "high school",
       college_name: "apex school",
       degree: "higher education",
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum harum, impedit labore nesciunt rerum voluptates doloremque exercitationem architecto odit eos ea, distinctio commodi minima recusandae veniam magnam aperiam iusto cum.`,
+      description: `Apex School, located at Tilottama -5, Rupandehi, is a co-educational English medium school established in 2060 BS, (registered with different name in 2045 BS) with a motto of “Learning for Life”. Since its establishment, it has adopted modern and universal techniques to maintain, develop and consolidate holistic development of its students. It has been successful to provide opportunity to its students with essential
+life skill opportunities. Besides teaching and learning, Apex School emphasizes on extra curricular activities, learning of moral values and love to humanity for students be able to earn respect and faith in society.`,
     },
     {
       from: "2014 A.D",
@@ -20,7 +21,7 @@ function Experience({ DarkTheme, id }) {
       university_name: "Pokhara university",
       college_name: "Tilottama College",
       degree: "science & technology",
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum harum, impedit labore nesciunt rerum voluptates doloremque exercitationem architecto odit eos ea, distinctio commodi minima recusandae veniam magnam aperiam iusto cum.`,
+      description: `Tilottama Campus was established in  1996 as the first private college in Rupandehi by a team of dedicated, experienced and enterprising academicians to cater for the growing demands of parents and students in the higher education by providing quality education and guaranteeing top class graduates.Similarly, it is also running Bachelor in Business Administration (BBA) programme in affiliation with Pokhara University.`,
     },
     {
       from: "2016 A.D",
@@ -28,7 +29,8 @@ function Experience({ DarkTheme, id }) {
       university_name: "Pokhara university",
       college_name: "Nepal college of information technology",
       degree: "software engineering",
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum harum, impedit labore nesciunt rerum voluptates doloremque exercitationem architecto odit eos ea, distinctio commodi minima recusandae veniam magnam aperiam iusto cum.`,
+      description: `Nepal College of Information  Technology – NCIT, established in 2001, runs Pokhara University-affiliated Bachelor’s and Master’s programs – BE, BBA, BCA, ME, MSc & MCIS. Our  Engineering Degrees are approved by  the Nepal Engineering Council. It has  produced over a thousand engineers  since its establishment.
+NCIT, a pioneer private institution  providing engineering education in  Nepal, is renowned for  excellence in  teaching & research, while maintaining  close and mutually beneficial links  with various sectors. The College  provides excellent higher education  opportunities and nurtures individual  talent using an applicable knowledge  base that fully supports ongoing social  changes and economic advances.`,
     },
   ];
   const experience = [
@@ -100,7 +102,9 @@ function Experience({ DarkTheme, id }) {
                         <div className="w-full h-[1px] md:hidden bg-gray-200 my-5"></div>
 
                         <div className="font-bold text-lg">Information: </div>
-                        <div>{val.description}</div>
+                        <div className="h-48 scroll overflow-scroll">
+                          {val.description}
+                        </div>
                         <div className="w-full h-[1px] md:hidden bg-gray-200 my-5"></div>
                       </div>
                     </div>
@@ -170,7 +174,9 @@ function Experience({ DarkTheme, id }) {
                         <div className="w-full h-[1px] md:hidden bg-gray-200 my-5"></div>
 
                         <div className="font-bold text-lg">Information: </div>
-                        <div>{val.description}</div>
+                        <div className="h-48 scroll overflow-scroll">
+                          {val.description}
+                        </div>
                         <div className="w-full h-[1px] md:hidden bg-gray-200 my-5"></div>
                       </div>
                     </div>

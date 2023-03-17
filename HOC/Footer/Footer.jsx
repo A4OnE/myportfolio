@@ -6,7 +6,7 @@ import kitty from "../../UI/Resources/Image/kitty-unscreen.gif";
 
 function Footer() {
   return (
-    <div className="bg-[#171C28] text-white h-[200px] flex flex-col items-center   py-8 px-2 md:px-0">
+    <div className="bg-[#171C28] text-white  flex flex-col items-center   py-8 px-2 md:px-0">
       <div>
         <Link href={"/"}>
           <div className=" h-10  flex justify-center items-center cursor-pointer mt-12  md:text-xl font-bold  Agustina">
@@ -32,8 +32,9 @@ function Footer() {
           </div>
         </Link>
       </div>
-      <div className="  md:flex justify-between    w-full items-end    ">
-        <div className="capitalize font-bold text-sm md:text-base  flex justify-center md:block">
+
+      <div className=" py-4 md:flex justify-between    w-full items-end    ">
+        <div className="capitalize font-bold text-sm md:text-base   flex justify-center md:block">
           &copy; {new Date().getFullYear()} Nischal Karki Chhetri. All Rights
           Reserved.{" "}
         </div>
