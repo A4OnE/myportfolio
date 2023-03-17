@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavData } from "../../../HOC/AdditionalInformation/Navdata";
 import { useRouter } from "next/router";
-import LOGO from "../../../UI/Resources/Image/slider.jpg";
+// import LOGO from "../../../UI/Resources/Image/slider.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -63,7 +63,7 @@ function TopBar({ DarkTheme, Theme }) {
           <div
             onClick={() => scrollToTop()}
             className={`${
-              imageHeight ? "block" : " hidden"
+              imageHeight ? "block" : " hidden "
             } fixed bottom-20 right-5 bg-[#464546] shadow-md cursor-pointer shadow-[#8f8f8f] z-[1000] rounded-full text-white`}
           >
             <MdKeyboardArrowUp className="h-11 w-11 p-1" />
