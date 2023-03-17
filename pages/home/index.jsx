@@ -12,7 +12,7 @@ import Contact from "../contact";
 import Project from "../project";
 import Footer from "../../HOC/Footer/Footer";
 import ScrollIntoView from "react-scroll-into-view";
-// import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 function Home() {
   const [ID, setID] = useState("");
   const myIntroduction = [
