@@ -41,7 +41,7 @@ function Home() {
 
   return (
     <Layout>
-      <div className="px-4 pt-5 pb-5 md:px-14  overflow-hidden Raleway   md:pt-14 md:pb-8  h-full">
+      <div className="px-4 pt-5 pb-5 md:px-14  overflow-hidden font-Raleway   md:pt-14 md:pb-8  h-full">
         <div className=" pb-10 md:py-10 md:h-[600px]">
           <div className="md:mt-8">
             {myIntroduction.map((val, i) => {
@@ -82,7 +82,7 @@ function Home() {
                       triggerOnce
                       damping={1e-1}
                     >
-                      <div className="mt-8 md:text-[32px]   font-medium  md:w-10/12">
+                      <div className="mt-8 md:text-[32px] font-Raleway   md:w-10/12">
                         {val.description}
                       </div>
                     </Fade>
