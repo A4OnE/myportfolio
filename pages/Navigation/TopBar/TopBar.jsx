@@ -98,7 +98,7 @@ function TopBar({ DarkTheme, Theme }) {
                   <ScrollTo selector={`${val.id}`}>
                     {" "}
                     <div
-                      className={`hover:scale-105 Raleway 
+                      className={`hover:scale-105 Raleway raleway Raleway
                     cursor-pointer px-4 py-2 ${
                       DarkTheme
                         ? "hover:bg-orange-500 hover:text-white  "
