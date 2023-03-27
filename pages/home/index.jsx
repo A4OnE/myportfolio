@@ -13,6 +13,9 @@ import Project from "../project";
 import Footer from "../../HOC/Footer/Footer";
 import ScrollIntoView from "react-scroll-into-view";
 // import { useRouter } from "next/router";
+import { Inter,Raleway,Fasthand } from 'next/font/google'
+
+const inter = Raleway({ subsets: ['latin'],weight:['400'],preload:true })
 function Home() {
   // const [slide, setSlide] = useState(false);
   const myIntroduction = [
@@ -82,7 +85,7 @@ function Home() {
                       triggerOnce
                       damping={1e-1}
                     >
-                      <div className="mt-8 md:text-[32px] font-Raleway   md:w-10/12">
+                      <div className={`mt-8 md:text-[32px] ${inter.className}  md:w-10/12`}>
                         {val.description}
                       </div>
                     </Fade>
