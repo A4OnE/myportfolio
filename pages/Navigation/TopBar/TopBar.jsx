@@ -21,6 +21,9 @@ import WhatIDo from "../../whatIDo";
 import { Fade, Slide, Zoom } from "react-awesome-reveal";
 // import TopBar from "../Navigation/TopBar/TopBar";
 import ScrollTo from "react-scroll-into-view";
+import { Inter,Raleway,Fasthand } from 'next/font/google'
+
+const inter = Fasthand({ subsets: ['latin'],weight:['400'],preload:true })
 import Head from "next/head";
 function TopBar({ DarkTheme, Theme }) {
   const [imageHeight, setImageHeight] = useState(false);
@@ -79,7 +82,7 @@ function TopBar({ DarkTheme, Theme }) {
                 } transition-all duration-300 delay-100 ease-in-out`}
               >
                 <span> {`<`} </span>
-                <div className="Agustina capitalize">nischal karki chhetri</div>
+                <div className={`${inter.className} capitalize`}>nischal karki chhetri</div>
                 <span>{`/>`}</span>
               </div>
             </Link>
