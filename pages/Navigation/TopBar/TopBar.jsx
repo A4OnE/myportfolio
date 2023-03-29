@@ -79,7 +79,9 @@ function TopBar({ DarkTheme, Theme }) {
                 } transition-all duration-300 delay-100 ease-in-out`}
               >
                 <span> {`<`} </span>
-                <div className="Agustina capitalize">nischal karki chhetri</div>
+                <div className="font- Agustina capitalize">
+                  nischal karki chhetri
+                </div>
                 <span>{`/>`}</span>
               </div>
             </Link>
@@ -136,7 +138,7 @@ function TopBar({ DarkTheme, Theme }) {
           <button onClick={() => setShowSidebar(true)}>
             <MdDehaze
               className={` ${
-                DarkTheme ? "text-white" : "text-black"
+                DarkTheme ? "text-white" : "text-black  "
               } text-4xl `}
             />
           </button>
@@ -164,7 +166,7 @@ function TopBar({ DarkTheme, Theme }) {
                      transition-all duration-300 delay-100 ease-in-out`}
                   >
                     <span> {`<`} </span>
-                    <div className="Agustina capitalize">
+                    <div className="font-Agustina capitalize">
                       nischal karki chhetri
                     </div>
                     <span>{`/>`}</span>

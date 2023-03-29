@@ -12,9 +12,11 @@ import Contact from "../contact";
 import Project from "../project";
 import Footer from "../../HOC/Footer/Footer";
 import ScrollIntoView from "react-scroll-into-view";
+import Head from "next/head";
 // import { useRouter } from "next/router";
 function Home() {
   // const [slide, setSlide] = useState(false);
+
   const myIntroduction = [
     {
       description:
@@ -41,7 +43,7 @@ function Home() {
 
   return (
     <Layout>
-      <div className="px-4 pt-5 pb-5 md:px-14  overflow-hidden Raleway   md:pt-14 md:pb-8  h-full">
+      <div className="px-4 pt-5 pb-5 md:px-14  overflow-hidden font- Raleway   md:pt-14 md:pb-8  h-full">
         <div className=" pb-10 md:py-10 md:h-[600px]">
           <div className="md:mt-8">
             {myIntroduction.map((val, i) => {

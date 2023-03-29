@@ -10,11 +10,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
-    // fontFamily: {
-    //   Agustina: ["Agustina", "sans-serif"],
-    //   Raleway: ['"Raleway"', "sans-serif"], // Ensure fonts with spaces have " " surrounding it.
-    // },
+    extend: {
+      // fontFamily: {
+      //   Agustina: ["Agustina Regular", "sans-serif"],
+      //   agustina: ["Agustina Regular", "sans-serif"],
+      //   Raleway: ['"Raleway"', "sans-serif"], // Ensure fonts with spaces have " " surrounding it.
+      // },
+    },
   },
   plugins: [],
 };

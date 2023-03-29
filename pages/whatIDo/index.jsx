@@ -7,7 +7,7 @@ import { FaSass, FaReact, FaNpm } from "react-icons/fa";
 import img from "../../UI/Resources/Image/kitty.gif";
 import Image from "next/image";
 import image from "../../UI/Resources/Image/left.png";
-import { Slide, Zoom } from "react-awesome-reveal";
+import { Fade, Slide, Zoom } from "react-awesome-reveal";
 import { useRouter } from "next/router";
 
 function WhatIDo() {
@@ -63,7 +63,9 @@ function WhatIDo() {
   return (
     <div id="skills">
       <div className="text-2xl md:text-4xl  md:w-[66%] flex md:justify-end pt-10 md:pt-24 font-bold uppercase">
-        what i do
+        <Fade direction="left" triggerOnce cascade delay={5e3} damping={1e-1}>
+          <div> what i do</div>
+        </Fade>
       </div>
 
       <div className="md:grid  grid-cols-12 md:gap-20 pt-7 md:pb-14">
