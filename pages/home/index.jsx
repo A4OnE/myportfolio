@@ -64,14 +64,14 @@ function Home() {
                         </Fade>
                       </div>
                       <div
-                        className={` ${inter.className}  md:hidden  block  text-base md:text-[28px]   lg:text-5xl typeWriter `}
+                        className={` ${inter.className}  md:hidden  block   md:text-[28px]   text-[20px]  typeWriter `}
                       >
                         {" "}
                         <Fade triggerOnce delay={1e3} cascade damping={0.1}>
                           {`  Hello, I'm Nischal karki chhetri`}
                         </Fade>
                       </div>
-                      <div className=" h-12 w-fit absolute left-[65%] md:top-10 md:right lg:left-[57%]  md:h-66px">
+                      <div className=" h-12 w-fit absolute left-[75%] md:top-10 md:right lg:left-[57%]  md:h-66px">
                         <Fade triggerOnce delay={4e3} cascade damping={1e-1}>
                           <div className=" ">
                             {" "}
@@ -143,8 +143,8 @@ function Home() {
                 {" "}
                 {/* <ScrollIntoView selector="#contactMe"> */}
                 <button
-                  className="bg-gray-700 px-6 py-3 capitalize
-               text-lg font-semibold hover:bg-opacity-80 rounded-[4px]
+                  className="bg-gray-700 px-3 md:px-6 py-3 capitalize
+                  text-sm  md:text-lg font-semibold hover:bg-opacity-80 rounded-[4px]
                 transition-all ease-in-out duration-300 delay-100 "
                 >
                   contact me
@@ -154,8 +154,8 @@ function Home() {
               <div>
                 {" "}
                 <button
-                  className="bg-gray-700 px-6 py-3 capitalize 
-              text-lg font-semibold hover:bg-opacity-80 rounded-[4px]
+                  className="bg-gray-700  px-3 md:px-6 py-3 capitalize 
+            text-sm  md:text-lg font-semibold hover:bg-opacity-80 rounded-[4px]
               transition-all ease-in-out duration-300 delay-100"
                 >
                   visit my profile
