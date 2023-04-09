@@ -174,8 +174,8 @@ function TopBar({ DarkTheme, Theme }) {
               >
                 <div className="w-full ">
                   <div
-                    className={`flex  gap-1 text-lg md:text-2xl justify-center  md:justify-start md: mx-6 mt-5 
-                    text-[hsl(313,61%,55%)] 
+                    className={`flex  gap-1 text-lg md:text-2xl justify-start mx-6  md:justify-start  mt-5 
+                    ${DarkTheme ? "text-white" : "text-[hsl(313,61%,55%)] "}
                      transition-all duration-300 delay-100 ease-in-out`}
                   >
                     <span> {`<`} </span>
