@@ -30,8 +30,9 @@ const inters = Raleway({ subsets: ["latin"], weight: ["400"], preload: true });
 import Head from "next/head";
 function TopBar({ DarkTheme, Theme }) {
   const [imageHeight, setImageHeight] = useState(false);
-  const [subNav, showSubNav] = useState(false);
+  // const [subNav, showSubNav] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
+  const [showCancelButton, setShowCancelButton] = useState(false);
 
   const router = useRouter();
   useEffect(() => {
@@ -51,14 +52,32 @@ function TopBar({ DarkTheme, Theme }) {
   };
   console.log(router);
   const [ID, setID] = useState("");
-  const myIntroduction = [
-    {
-      title: "Hello, I'm Nischal Karki",
-      description:
-        "A passionate Front-End Software Developer  having an experience of building Web and Mobile applications with (React)/(Next) and some other cool libraries and frameworks.",
-      image: img,
-    },
-  ];
+  // const myIntroduction = [
+  //   {
+  //     title: "Hello, I'm Nischal Karki",
+  //     description:
+  //       "A passionate Front-End Software Developer  having an experience of building Web and Mobile applications with (React)/(Next) and some other cool libraries and frameworks.",
+  //     image: img,
+  //   },
+  // ];
+  useEffect(() => {
+    if (showSidebar === true) {
+      let interval = setTimeout(() => {
+        setShowCancelButton(true);
+      }, 1000);
+      return () => {
+        clearTimeout(interval);
+      };
+    }
+  }, [showSidebar]);
+  // useEffect(() => {
+  //   if (showSidebar === true) {
+  //     let cancelSlowlyAppear = setTimeout(() => {
+  //       setShowCancelButton(true);
+  //     }, 6000);
+  //     return () => clearTimeout(cancelSlowlyAppear);
+  //   }
+  // }, [showSidebar]);
 
   return (
     <>
@@ -229,17 +248,23 @@ function TopBar({ DarkTheme, Theme }) {
                 <div className="border-b"></div>
               </div>
             </div>
-            <div
-              className={`${
-                showSidebar
-                  ? "flex absolute col-span-3 top-3 w-full z-50 left-2"
-                  : "hidden"
-              } ''`}
-            >
-              <button onClick={() => setShowSidebar(false)}>
-                <MdClose className="text-black  text-[35px] p-1 bg-white rounded-full" />
-              </button>
-            </div>
+            {showCancelButton && (
+              <div
+                className={`${
+                  showSidebar
+                    ? "flex absolute col-span-3 top-3 w-full z-50 left-2"
+                    : "hidden"
+                } ''`}
+              >
+                <button
+                  onClick={() => {
+                    setShowSidebar(false), setShowCancelButton(false);
+                  }}
+                >
+                  <MdClose className="text-black  text-[35px] p-1 bg-white rounded-full" />
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
