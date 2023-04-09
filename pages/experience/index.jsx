@@ -62,7 +62,7 @@ NCIT, a pioneer private institution  providing engineering education in  Nepal, 
   return (
     <div className=" pt-24 interClassName" id="work">
       <div className="text-2xl md:text-4xl font-medium">
-        Education & work Experience Career
+        Education & Work Experience Career
       </div>
       <div className="md:grid  grid-cols-12  place-items-center gap-10 pt-7 pb-14">
         <div className="col-span-6">
