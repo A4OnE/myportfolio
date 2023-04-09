@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import Footer from "../../../HOC/Footer/Footer";
 import TopBar from "../TopBar/TopBar";
 import { Inter, Raleway, Fasthand } from "next/font/google";
+const inters = Raleway({ subsets: ["latin"], weight: ["400"], preload: true });
 
-const inter = Raleway({ subsets: ["latin"], weight: ["400"], preload: true });
+const inter = Fasthand({ subsets: ["latin"], weight: ["400"], preload: true });
 function Layout({ children }) {
   const [DarkTheme, setDarkTheme] = useState(false);
   const Theme = () => {
@@ -22,7 +23,9 @@ function Layout({ children }) {
           DarkTheme
             ? "bg-[#171C28] text-white  md:text-[#ACACAC]"
             : "bg-[#ECF9FF] text-[black]"
-        } font-Raleway  relative  transition-all ease-in-out duration-300 delay-100`}
+        } ${
+          inters.className
+        } relative  transition-all ease-in-out duration-300 delay-100`}
       >
         {children}
       </div>

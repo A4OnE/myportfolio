@@ -25,6 +25,8 @@ import ScrollTo from "react-scroll-into-view";
 import { Inter, Raleway, Fasthand } from "next/font/google";
 import { Agustina } from "next/font/google";
 const inter = Fasthand({ subsets: ["latin"], weight: ["400"], preload: true });
+const inters = Raleway({ subsets: ["latin"], weight: ["400"], preload: true });
+
 import Head from "next/head";
 function TopBar({ DarkTheme, Theme }) {
   const [imageHeight, setImageHeight] = useState(false);
@@ -63,7 +65,7 @@ function TopBar({ DarkTheme, Theme }) {
       <div
         className={`${
           DarkTheme ? "text-white bg-[#171C28]" : "text-black bg-[#ECF9FF]"
-        } h-20 flex justify-center items-center px-4 transition-all duration-300 delay-100 ease-in-out `}
+        } font-Raleway  h-20 flex justify-center items-center px-4 transition-all duration-300 delay-100 ease-in-out `}
       >
         <div
           onClick={() => scrollToTop()}
@@ -86,7 +88,7 @@ function TopBar({ DarkTheme, Theme }) {
                 <div
                   className={`
                 ${inter.className} 
-                Agustina
+               
                 capitalize`}
                 >
                   nischal karki chhetri
@@ -109,11 +111,11 @@ function TopBar({ DarkTheme, Theme }) {
                   <ScrollTo selector={`${val.id}`}>
                     {" "}
                     <div
-                      className={`hover:scale-105 Raleway raleway Raleway
-                    cursor-pointer px-4 py-2 ${
+                      className={`hover:scale-105 ${inter.className}
+                    cursor-pointer px-4 py-2 text-2xl ${
                       DarkTheme
-                        ? "hover:bg-[hsl(313,61%,55%)]  hover:text-white  "
-                        : "hover:bg-[#e0e0e0]"
+                        ? "hover:bg-[white]  hover:text-[#171C28] hover:bg-opacity-40 "
+                        : "hover:bg-[gray] hover:text-white hover:bg-opacity-40"
                     } `}
                     >
                       {val.title}
@@ -148,7 +150,7 @@ function TopBar({ DarkTheme, Theme }) {
             <MdDehaze
               className={` ${
                 DarkTheme ? "text-white" : "text-black"
-              } text-4xl `}
+              }  text-4xl `}
             />
           </button>
           <div
@@ -156,7 +158,7 @@ function TopBar({ DarkTheme, Theme }) {
               showSidebar
                 ? "bg-black fixed z-30 top-0 right-0 bottom-0 left-0"
                 : ""
-            }  font-Raleway  bg-opacity-80 `}
+            }    bg-opacity-80 `}
           >
             <div
               className={` grid grid-cols-12 fixed  z-10 top-0 bottom-0  left-0 right-0  ${
@@ -172,7 +174,7 @@ function TopBar({ DarkTheme, Theme }) {
               >
                 <div className="w-full ">
                   <div
-                    className={`flex  gap-1 text-lg md:text-2xl justify-center  md:justify-start md:mx-36 mt-5 
+                    className={`flex  gap-1 text-lg md:text-2xl justify-center  md:justify-start md: mx-6 mt-5 
                     text-[hsl(313,61%,55%)] 
                      transition-all duration-300 delay-100 ease-in-out`}
                   >
@@ -184,7 +186,7 @@ function TopBar({ DarkTheme, Theme }) {
                   </div>
                 </div>
                 <div
-                  className={`lg:hidden block gap-4 mt-12 w-full  capitalize text-lg font-medium  items-center justify-center`}
+                  className={`lg:hidden block gap-4 ${inter.className} mt-5 w-full  capitalize text-lg font-medium  items-center justify-center`}
                 >
                   {NavData.map((val, i) => {
                     return (
@@ -193,7 +195,7 @@ function TopBar({ DarkTheme, Theme }) {
                           <ScrollTo selector={`${val.id}`}>
                             {" "}
                             <div
-                              className={` my-2 px-6 mx-auto duration-700 delay-200 cursor-pointer py-4  border-b hover:text-white hover:bg-[#d6d6d6] w-[98%] `}
+                              className={` my-2 px-6 mx-auto  duration-300 delay-100 cursor-pointer py-4 text-2xl  border-b hover:text-white hover:bg-[#d6d6d6] w-[98%] `}
                               onClick={() => setShowSidebar(false)}
                             >
                               {val.title}
@@ -207,15 +209,15 @@ function TopBar({ DarkTheme, Theme }) {
                 <div
                   className={` ${
                     !DarkTheme ? "mx-5" : ""
-                  } w-20  my-5 px-2 py-1  `}
+                  }  px-6 mx-auto duration-300 delay-100  cursor-pointer py-4 text-2xl   hover:text-white hover:bg-[#d6d6d6] w-[98%]  `}
                   onClick={() => {
                     Theme(), setShowSidebar(false);
                   }}
                 >
                   <div
                     className={` flex  ${
-                      DarkTheme ? "justify-end " : "justify-start "
-                    } cursor-pointer`}
+                      DarkTheme ? "justify-start " : "justify-start "
+                    } cursor-pointer `}
                   >
                     {DarkTheme ? (
                       <BsFillMoonStarsFill className="text-  text-5xl " />
