@@ -4,7 +4,7 @@ import { Slide } from "react-awesome-reveal";
 import image1 from "../../UI/Resources/Image/star.gif";
 import image from "../../UI/Resources/Image/designs.png";
 
-function Experience({ DarkTheme, id }) {
+function Experience({ DarkTheme, id, interClassName }) {
   const education = [
     {
       from: "2060 B.S",
@@ -60,8 +60,8 @@ NCIT, a pioneer private institution  providing engineering education in  Nepal, 
     },
   ];
   return (
-    <div className=" pt-24   " id="work">
-      <div className="text-2xl md:text-4xl font-bold">
+    <div className=" pt-24 interClassName" id="work">
+      <div className="text-2xl md:text-4xl font-medium">
         Education & work Experience Career
       </div>
       <div className="md:grid  grid-cols-12  place-items-center gap-10 pt-7 pb-14">
@@ -78,21 +78,21 @@ NCIT, a pioneer private institution  providing engineering education in  Nepal, 
                   <div key={i} className="md:grid  grid-cols-12 my-7">
                     <div className=" col-span-5">
                       <div className="flex gap-3 items-end border-b w-[97%] pb-2">
-                        <div className="capitalize text-lg font-bold">
-                          from <div className="text-base ">{val.from}</div>
+                        <div className="capitalize text-lg ">
+                          from <div className="text-sm ">{val.from}</div>
                         </div>
                         -
-                        <div className="capitalize font-bold">
-                          to <div className="text-base ">{val.to}</div>
+                        <div className="capitalize ">
+                          to <div className=" text-sm ">{val.to}</div>
                         </div>
                       </div>
-                      <div className="md:text-lg mt-5 font-bold uppercase ">
+                      <div className="md:text-lg mt-5 font-medium uppercase ">
                         {val.degree}
                       </div>
-                      <div className="text-xs mt-1 capitalize font-black border-b w-[97%] pb-2 ">
+                      <div className="text-xs mt-1 capitalize font-medium border-b w-[97%] pb-2 ">
                         {val.college_name}
                       </div>
-                      <div className="uppercase mt-2  text-sm font-extrabold">
+                      <div className="uppercase mt-2  text-sm font-semibold ">
                         {val.university_name}
                       </div>
                     </div>
@@ -101,7 +101,7 @@ NCIT, a pioneer private institution  providing engineering education in  Nepal, 
                       <div className="">
                         <div className="w-full h-[1px] md:hidden bg-gray-200 my-5"></div>
 
-                        <div className="font-bold text-lg">Information: </div>
+                        <div className=" text-lg">Information: </div>
                         <div className="h-48 scroll overflow-scroll">
                           {val.description}
                         </div>
@@ -152,21 +152,21 @@ NCIT, a pioneer private institution  providing engineering education in  Nepal, 
                   <div key={i} className="md:grid  grid-cols-12 my-7">
                     <div className=" col-span-5">
                       <div className="flex gap-3 items-end border-b w-[97%] pb-2">
-                        <div className="capitalize text-lg font-bold">
-                          from <div className="text-base ">{val.from}</div>
+                        <div className="capitalize text-lg ">
+                          from <div className="text-sm ">{val.from}</div>
                         </div>
                         -
-                        <div className="capitalize font-bold">
-                          to <div className="text-base ">{val.to}</div>
+                        <div className="capitalize ">
+                          to <div className=" text-sm ">{val.to}</div>
                         </div>
                       </div>
-                      <div className="md:text-lg mt-5 font-bold uppercase ">
+                      <div className="md:text-lg mt-5 font-medium uppercase ">
                         {val.degree}
                       </div>
-                      <div className="text-xs mt-1 capitalize font-black border-b w-[97%] pb-2 ">
+                      <div className="text-xs mt-1 capitalize font-medium border-b w-[97%] pb-2 ">
                         {val.college_name}
                       </div>
-                      <div className="uppercase mt-2  text-sm font-extrabold">
+                      <div className="uppercase mt-2  text-sm font-semibold ">
                         {val.university_name}
                       </div>
                     </div>
@@ -175,8 +175,8 @@ NCIT, a pioneer private institution  providing engineering education in  Nepal, 
                       <div className="">
                         <div className="w-full h-[1px] md:hidden bg-gray-200 my-5"></div>
 
-                        <div className="font-bold text-lg">Information: </div>
-                        <div className="h-48 scroll overflow-scroll">
+                        <div className=" text-lg">Information: </div>
+                        <div className="h-[180px]  scroll text-sm overflow-scroll">
                           {val.description}
                         </div>
                         <div className="w-full h-[1px] md:hidden bg-gray-200 my-5"></div>

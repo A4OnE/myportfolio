@@ -48,7 +48,7 @@ function Footer() {
       </div>
 
       <div className=" py-4 md:flex justify-between    w-full items-end    ">
-        <div className="capitalize font-bold text-sm md:text-base   md:flex justify-center ">
+        <div className="capitalize font-light text-sm md:text-[14px]   md:flex justify-center ">
           &copy; {new Date().getFullYear()} Nischal Karki Chhetri. All Rights
           Reserved.{" "}
         </div>
