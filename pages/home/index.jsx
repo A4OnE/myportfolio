@@ -15,7 +15,9 @@ import ScrollIntoView from "react-scroll-into-view";
 // import { useRouter } from "next/router";
 import { Inter, Raleway, Fasthand } from "next/font/google";
 
-const inter = Raleway({ subsets: ["latin"], weight: ["400"], preload: true });
+const inter = Fasthand({ subsets: ["latin"], weight: ["400"], preload: true });
+const inters = Raleway({ subsets: ["latin"], weight: ["400"], preload: true });
+
 function Home() {
   // const [slide, setSlide] = useState(false);
   const myIntroduction = [
@@ -53,13 +55,23 @@ function Home() {
                   <div className="  md:mt-14 col-span-8">
                     {/* <Slide delay={1e3} cascade damping={1e-1}> */}
                     <div className=" flex gap-2 items-center ">
-                      <div className="  text-base md:text-[28px]   lg:text-5xl lg:-mx-9 typeWriter  font-Raleway">
+                      <div
+                        className={` ${inter.className} hidden  border-r  tracking-widest md:block text-base md:text-[28px]   lg:text-5xl lg:-mx-9 typeWriter  `}
+                      >
                         {" "}
                         <Fade triggerOnce delay={1e3} cascade damping={0.1}>
-                          {`  Hello,I'm Nischal Karki`}
+                          {`  Hello, I'm Nischal Karki chhetri `}
                         </Fade>
                       </div>
-                      <div className=" h-12 w-fit absolute left-[70%] md:top-10 md:right lg:left-[48%]  md:h-66px">
+                      <div
+                        className={` ${inter.className}  md:hidden  block  text-base md:text-[28px]   lg:text-5xl typeWriter `}
+                      >
+                        {" "}
+                        <Fade triggerOnce delay={1e3} cascade damping={0.1}>
+                          {`  Hello, I'm Nischal karki chhetri`}
+                        </Fade>
+                      </div>
+                      <div className=" h-12 w-fit absolute left-[65%] md:top-10 md:right lg:left-[57%]  md:h-66px">
                         <Fade triggerOnce delay={4e3} cascade damping={1e-1}>
                           <div className=" ">
                             {" "}
@@ -86,7 +98,7 @@ function Home() {
                       damping={1e-1}
                     >
                       <div
-                        className={`mt-8 md:text-[32px] ${inter.className}  md:w-10/12`}
+                        className={`mt-8 text-[21px] md:text-[32px] leading-6 md:leading-normal ${inter.className}  md:w-10/12`}
                       >
                         {val.description}
                       </div>
