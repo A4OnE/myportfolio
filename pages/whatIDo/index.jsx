@@ -62,7 +62,7 @@ function WhatIDo() {
   ];
   return (
     <div id="skills">
-      <div className="text-2xl md:text-4xl  md:w-[66%] flex md:justify-end pt-10 md:pt-24 font-bold uppercase">
+      <div className="text-2xl md:text-4xl  md:w-[66%] flex md:justify-end pt-10 md:pt-24 font-medium uppercase">
         what i do
       </div>
 
@@ -85,7 +85,7 @@ function WhatIDo() {
               {whatIDo.map((val, i) => {
                 return (
                   <div key={i}>
-                    <div className=" mb-6  md:my-6  text-base md:text-[18.5px] w-11/12">
+                    <div className=" mb-6  md:my-6  text-[15px] md:text-[18.5px] w-11/12">
                       {val.description}
                     </div>
 
@@ -96,7 +96,7 @@ function WhatIDo() {
                             <div className=" text-4xl md:text-6xl ">
                               {vals.icon}
                             </div>
-                            <div className=" text-[11px] md:text-[16px]">
+                            <div className=" text-[12px] md:text-[16px]">
                               {vals.name}
                             </div>
                           </div>
@@ -107,7 +107,7 @@ function WhatIDo() {
                       {val.points.map((value, i) => {
                         return (
                           <div key={i} className="">
-                            <div className={` text-[13px] md:text-[17px]  `}>
+                            <div className={` text-[14px] md:text-[17px]  `}>
                               ⚡{value.point}
                             </div>
                           </div>
@@ -122,19 +122,19 @@ function WhatIDo() {
         </div>
       </div>
       <div className="w-[90%] md:w-[95%]  ">
-        <div className="text-2xl md:text-4xl font-bold mt-14 md:mt-0  md:mb-5 uppercase">
+        <div className="text-2xl md:text-4xl font-medium mt-14 md:mt-0  md:mb-5 uppercase">
           my skills
         </div>
         <Zoom direction="top" triggerOnce>
           <div className="flex flex-col relative uppercase  gap-3">
-            <div className="mt-6  text-lg font-medium">html</div>
+            <div className="mt-6 text-base  md:text-lg font-medium">html</div>
             <div className="w-full">
               <div className={`bg-[#bfbfbf] rounded-xl w-[100%] h-[10px]`}>
                 <div
                   className={`bg-orange-500 rounded-xl w-[90%] h-[10px] transition-all ease-in-out delay-500 duration-1000`}
                 >
                   {" "}
-                  <div className="absolute top-14 text-orange-500   -right-10">
+                  <div className="absolute top-14 text-orange-500  text-sm  -right-10">
                     {" "}
                     90%
                   </div>
@@ -143,13 +143,13 @@ function WhatIDo() {
             </div>
           </div>
           <div className="flex flex-col relative uppercase  gap-3">
-            <div className="mt-6  text-lg font-medium">css</div>
+            <div className="mt-6 text-base  md:text-lg font-medium">css</div>
             <div className="w-full">
               <div className={`bg-[#bfbfbf] rounded-xl w-[100%] h-[10px]`}>
                 <div
                   className={`bg-orange-500 rounded-xl w-[80%] h-[10px] transition-all ease-in-out delay-500 duration-1000`}
                 >
-                  <div className="absolute top-14  text-orange-500  -right-10">
+                  <div className="absolute top-14  text-orange-500  text-sm -right-10">
                     {" "}
                     80%
                   </div>
@@ -158,13 +158,15 @@ function WhatIDo() {
             </div>
           </div>
           <div className="flex flex-col relative uppercase  gap-3">
-            <div className="mt-6  text-lg font-medium">javascript</div>
+            <div className="mt-6 text-base  md:text-lg font-medium">
+              javascript
+            </div>
             <div className="w-full">
               <div className={`bg-[#bfbfbf] rounded-xl w-[100%] h-[10px]`}>
                 <div
                   className={`bg-orange-500 rounded-xl w-[62%] h-[10px] transition-all ease-in-out delay-500 duration-1000`}
                 >
-                  <div className="absolute top-14  text-orange-500  -right-10">
+                  <div className="absolute top-14  text-orange-500  text-sm -right-10">
                     {" "}
                     62%
                   </div>
@@ -173,13 +175,15 @@ function WhatIDo() {
             </div>
           </div>
           <div className="flex flex-col relative uppercase  gap-3">
-            <div className="mt-6  text-lg font-medium">react js</div>
+            <div className="mt-6 text-base  md:text-lg font-medium">
+              react js
+            </div>
             <div className="w-full">
               <div className={`bg-[#bfbfbf] rounded-xl w-[100%] h-[10px]`}>
                 <div
                   className={`bg-orange-500 rounded-xl w-[60%] h-[10px] transition-all ease-in-out delay-500 duration-1000`}
                 >
-                  <div className="absolute top-14  text-orange-500  -right-10">
+                  <div className="absolute top-14  text-orange-500  text-sm -right-10">
                     {" "}
                     60%
                   </div>
@@ -188,11 +192,13 @@ function WhatIDo() {
             </div>
           </div>
           <div className="flex flex-col relative uppercase  gap-3">
-            <div className="mt-6  text-lg font-medium">next js</div>
+            <div className="mt-6 text-base  md:text-lg font-medium">
+              next js
+            </div>
             <div className="w-full">
               <div className={`bg-[#bfbfbf] rounded-xl w-[100%] h-[10px]`}>
                 <div className={`bg-orange-500 rounded-xl w-[70%] h-[10px]`}>
-                  <div className="absolute top-14 text-orange-500   -right-10">
+                  <div className="absolute top-14 text-orange-500  text-sm  -right-10">
                     {" "}
                     70%
                   </div>
@@ -201,13 +207,15 @@ function WhatIDo() {
             </div>
           </div>
           <div className="flex flex-col relative uppercase  gap-3">
-            <div className="mt-6  text-lg font-medium">tailwind css</div>
+            <div className="mt-6 text-base  md:text-lg font-medium">
+              tailwind css
+            </div>
             <div className="w-full">
               <div className={`bg-[#bfbfbf] rounded-xl w-[100%] h-[10px]`}>
                 <div
                   className={`bg-orange-500 rounded-xl w-[100%] h-[10px] transition-all ease-in-out delay-500 duration-1000`}
                 >
-                  <div className="absolute top-14 text-orange-500   -right-10">
+                  <div className="absolute top-14 text-orange-500  text-sm  -right-10">
                     {" "}
                     100%
                   </div>

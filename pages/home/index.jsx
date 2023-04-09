@@ -13,9 +13,9 @@ import Project from "../project";
 import Footer from "../../HOC/Footer/Footer";
 import ScrollIntoView from "react-scroll-into-view";
 // import { useRouter } from "next/router";
-import { Inter,Raleway,Fasthand } from 'next/font/google'
+import { Inter, Raleway, Fasthand } from "next/font/google";
 
-const inter = Raleway({ subsets: ['latin'],weight:['400'],preload:true })
+const inter = Raleway({ subsets: ["latin"], weight: ["400"], preload: true });
 function Home() {
   // const [slide, setSlide] = useState(false);
   const myIntroduction = [
@@ -44,7 +44,7 @@ function Home() {
 
   return (
     <Layout>
-      <div className="px-4 pt-5 pb-5 md:px-14  overflow-hidden font-Raleway   md:pt-14 md:pb-8  h-full">
+      <div className="px-4 pt-5 pb-5 md:px-14  overflow-hidden   md:pt-14 md:pb-8  h-full">
         <div className=" pb-10 md:py-10 md:h-[600px]">
           <div className="md:mt-8">
             {myIntroduction.map((val, i) => {
@@ -53,14 +53,14 @@ function Home() {
                   <div className="  md:mt-14 col-span-8">
                     {/* <Slide delay={1e3} cascade damping={1e-1}> */}
                     <div className=" flex gap-2 items-center ">
-                      <div className="  md:text-[28px]  w- lg:text-5xl lg:-mx-9 typeWriter  md:font-bold">
+                      <div className="  text-base md:text-[28px]   lg:text-5xl lg:-mx-9 typeWriter  font-Raleway">
                         {" "}
                         <Fade triggerOnce delay={1e3} cascade damping={0.1}>
                           {`  Hello,I'm Nischal Karki`}
                         </Fade>
                       </div>
-                      <div className=" h-12 w-fit absolute left-[85%] md:top-10 md:right lg:left-[45%]  md:h-66px">
-                        <Fade triggerOnce delay={5e3} cascade damping={1e-1}>
+                      <div className=" h-12 w-fit absolute left-[70%] md:top-10 md:right lg:left-[48%]  md:h-66px">
+                        <Fade triggerOnce delay={4e3} cascade damping={1e-1}>
                           <div className=" ">
                             {" "}
                             <Image
@@ -85,7 +85,9 @@ function Home() {
                       triggerOnce
                       damping={1e-1}
                     >
-                      <div className={`mt-8 md:text-[32px] ${inter.className}  md:w-10/12`}>
+                      <div
+                        className={`mt-8 md:text-[32px] ${inter.className}  md:w-10/12`}
+                      >
                         {val.description}
                       </div>
                     </Fade>

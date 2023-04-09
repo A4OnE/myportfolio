@@ -13,15 +13,15 @@ function Contact() {
   // useEffect(() => {
   //   Aos.init({ once: true, duration: 1200, offset: 120 });
   // }, []);
-  const [ID, setID] = useState("");
+  // const [ID, setID] = useState("");
 
-  const router = useRouter();
-  useEffect(() => {
-    if (router.isReady) {
-      const { DarkTheme } = router.query;
-      setID(DarkTheme);
-    }
-  }, [router.isReady, router.query]);
+  // const router = useRouter();
+  // useEffect(() => {
+  //   if (router.isReady) {
+  //     const { DarkTheme } = router.query;
+  //     setID(DarkTheme);
+  //   }
+  // }, [router.isReady, router.query]);
   const whatIDo = [
     {
       description:
@@ -48,7 +48,7 @@ function Contact() {
   ];
   return (
     <div id="contactMe">
-      <div className="text-2xl  md:text-4xl  w-[69%] flex md:justify-end pt-32 font-bold uppercase">
+      <div className="text-2xl  md:text-4xl  w-[69%] flex md:justify-end pt-32 font-medium uppercase">
         contact me
       </div>
       <div className="md:grid  grid-cols-12 gap-20 -mt-7 md:mt-0 md:pt-7 ">
@@ -69,7 +69,7 @@ function Contact() {
             {whatIDo.map((val, i) => {
               return (
                 <div key={i}>
-                  <div className="my-5  uppercase  text-base md:text-[18.5px] w-11/12">
+                  <div className="my-5  uppercase  text-[15px] md:text-[18.5px] w-11/12">
                     {val.description}
                   </div>
 
@@ -78,7 +78,7 @@ function Contact() {
                       return (
                         <div key={i} className="">
                           <div
-                            className={`text-[13px] md:text-[17px] 
+                            className={`text-[14px] md:text-[17px] 
                            `}
                           >
                             ⚡{value.point}
@@ -97,7 +97,7 @@ function Contact() {
         <div className="md:grid  grid-cols-12 gap-20 md:pb-14 ">
           <div className="col-span-6  flex flex-col justify-center">
             <div className=" my-5 text-center ">
-              <div className="text-3xl  font-bold font-serif  uppercase ">
+              <div className="text-3xl  font-semibold font-serif  uppercase ">
                 address
               </div>
               <div className="text-lg capitalize font- my-2">
@@ -105,7 +105,7 @@ function Contact() {
               </div>
             </div>
             <div className="text-center ">
-              <div className=" text-3xl font-serif font-bold uppercase">
+              <div className=" text-3xl font-serif font-semibold uppercase">
                 phone
               </div>
               <div className="text-lg capitalize  my-2">

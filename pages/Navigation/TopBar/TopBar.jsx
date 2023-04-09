@@ -10,7 +10,8 @@ import {
   MdKeyboardArrowDown,
   MdKeyboardArrowUp,
 } from "react-icons/md";
-import { FaCircle } from "react-icons/fa";
+import { GiStripedSun } from "react-icons/gi";
+import { BsFillMoonStarsFill, BsSunFill } from "react-icons/bs";
 // import Collapse from "@kunukn/react-collapse";import React, { useState, useEffect } from "react";
 // import Layout from "../Navigation/Layout/Layout";
 // import Image from "next/image";
@@ -21,9 +22,9 @@ import WhatIDo from "../../whatIDo";
 import { Fade, Slide, Zoom } from "react-awesome-reveal";
 // import TopBar from "../Navigation/TopBar/TopBar";
 import ScrollTo from "react-scroll-into-view";
-import { Inter,Raleway,Fasthand } from 'next/font/google'
-
-const inter = Fasthand({ subsets: ['latin'],weight:['400'],preload:true })
+import { Inter, Raleway, Fasthand } from "next/font/google";
+import { Agustina } from "next/font/google";
+const inter = Fasthand({ subsets: ["latin"], weight: ["400"], preload: true });
 import Head from "next/head";
 function TopBar({ DarkTheme, Theme }) {
   const [imageHeight, setImageHeight] = useState(false);
@@ -64,25 +65,32 @@ function TopBar({ DarkTheme, Theme }) {
           DarkTheme ? "text-white bg-[#171C28]" : "text-black bg-[#ECF9FF]"
         } h-20 flex justify-center items-center px-4 transition-all duration-300 delay-100 ease-in-out `}
       >
-        <Zoom triggerOnce duration={1000}>
-          <div
-            onClick={() => scrollToTop()}
-            className={`${
-              imageHeight ? "block" : " hidden "
-            } fixed bottom-20 right-5
+        <div
+          onClick={() => scrollToTop()}
+          className={`${
+            imageHeight ? "block" : " hidden "
+          } fixed bottom-20 right-5
              bg-[#464546] shadow-md cursor-pointer shadow-[#8f8f8f] z-[1200] rounded-full text-white`}
-          >
-            <MdKeyboardArrowUp className="h-11 w-11 p-1" />
-          </div>
+        >
+          <MdKeyboardArrowUp className="h-11 w-11 p-1" />
+        </div>
+        <Zoom triggerOnce duration={1000}>
           <div className="w-full" onClick={() => router.reload()}>
             <Link href={"/"} passHref>
               <div
                 className={`flex md:gap-5 text-lg md:text-2xl   justify-start md:mx-36 mt-5 ${
-                  DarkTheme ? "text-white" : "text-orange-500 "
+                  DarkTheme ? "text-white" : "text-[hsl(313,61%,55%)] "
                 } transition-all duration-300 delay-100 ease-in-out`}
               >
                 <span> {`<`} </span>
-                <div className={`${inter.className} capitalize`}>nischal karki chhetri</div>
+                <div
+                  className={`
+                ${inter.className} 
+                Agustina
+                capitalize`}
+                >
+                  nischal karki chhetri
+                </div>
                 <span>{`/>`}</span>
               </div>
             </Link>
@@ -104,7 +112,7 @@ function TopBar({ DarkTheme, Theme }) {
                       className={`hover:scale-105 Raleway raleway Raleway
                     cursor-pointer px-4 py-2 ${
                       DarkTheme
-                        ? "hover:bg-orange-500 hover:text-white  "
+                        ? "hover:bg-[hsl(313,61%,55%)]  hover:text-white  "
                         : "hover:bg-[#e0e0e0]"
                     } `}
                     >
@@ -115,9 +123,9 @@ function TopBar({ DarkTheme, Theme }) {
               );
             })}
             <div
-              className={` ${
-                DarkTheme ? "bg-orange-500" : "bg-[#e0e0e0]"
-              } w-20 px-2 py-1 rounded-3xl`}
+              // className={` ${
+              //   DarkTheme ? "bg-text-[hsl(313,61%,55%)] " : "bg-[#e0e0e0]"
+              // } w-20 px-2 py-1 rounded-3xl`}
               onClick={() => Theme()}
             >
               <div
@@ -126,16 +134,16 @@ function TopBar({ DarkTheme, Theme }) {
                 } cursor-pointer`}
               >
                 {DarkTheme ? (
-                  <FaCircle className="text-white " />
+                  <BsFillMoonStarsFill className="text-white  text-5xl " />
                 ) : (
-                  <FaCircle className="text-black  " />
+                  <GiStripedSun className="text-[hsl(313,61%,55%)]  text-5xl " />
                 )}
               </div>
             </div>
           </div>
         </Zoom>
         {/* mobile device */}
-        <div className="flex flex-1 h-full items-center absolute right-6 lg:hidden text-black   justify-end">
+        <div className="flex flex-1 h-full items-center absolute right-6 lg:hidden text-[#111827]   justify-end">
           <button onClick={() => setShowSidebar(true)}>
             <MdDehaze
               className={` ${
@@ -148,7 +156,7 @@ function TopBar({ DarkTheme, Theme }) {
               showSidebar
                 ? "bg-black fixed z-30 top-0 right-0 bottom-0 left-0"
                 : ""
-            } bg-opacity-80 `}
+            }  font-Raleway  bg-opacity-80 `}
           >
             <div
               className={` grid grid-cols-12 fixed  z-10 top-0 bottom-0  left-0 right-0  ${
@@ -158,16 +166,18 @@ function TopBar({ DarkTheme, Theme }) {
               } `}
             >
               <div
-                className={`   bg-[#ffffff] w-80 col-span-9 fixed right-0 z-50 top-0 bottom-0 h-screen `}
+                className={`    ${
+                  DarkTheme ? "bg-[#111827] text-white" : "bg-white text-black"
+                } w-80 col-span-9 fixed right-0 z-50 top-0 bottom-0 h-screen `}
               >
                 <div className="w-full ">
                   <div
                     className={`flex  gap-1 text-lg md:text-2xl justify-center  md:justify-start md:mx-36 mt-5 
-                       text-orange-500 
+                    text-[hsl(313,61%,55%)] 
                      transition-all duration-300 delay-100 ease-in-out`}
                   >
                     <span> {`<`} </span>
-                    <div className="Agustina capitalize">
+                    <div className={` ${inter.className} capitalize`}>
                       nischal karki chhetri
                     </div>
                     <span>{`/>`}</span>
@@ -196,8 +206,8 @@ function TopBar({ DarkTheme, Theme }) {
                 </div>
                 <div
                   className={` ${
-                    DarkTheme ? "bg-orange-500" : "bg-[#e0e0e0]"
-                  } w-20  m-5 px-2 py-1 rounded-3xl `}
+                    !DarkTheme ? "mx-5" : ""
+                  } w-20  my-5 px-2 py-1  `}
                   onClick={() => {
                     Theme(), setShowSidebar(false);
                   }}
@@ -208,9 +218,9 @@ function TopBar({ DarkTheme, Theme }) {
                     } cursor-pointer`}
                   >
                     {DarkTheme ? (
-                      <FaCircle className="text-white " />
+                      <BsFillMoonStarsFill className="text-  text-5xl " />
                     ) : (
-                      <FaCircle className="text-black  " />
+                      <GiStripedSun className="text-[hsl(313,61%,55%)] text-5xl " />
                     )}
                   </div>
                 </div>

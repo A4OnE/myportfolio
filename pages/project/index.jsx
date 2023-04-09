@@ -33,45 +33,52 @@ function Project({ value }) {
       image: img,
       category: "web App",
       name: "Sikkai: E-learning platform",
+      url: "http://sikkainepal.com/",
     },
 
     {
       image: img1,
       category: "websites",
       name: "vip group nepal",
+      url: "https://vipgroupnepal.com/",
     },
     {
       image: img2,
       category: "website",
       name: "abhiyam robotics and instiute of IT",
+      url: "https://hubit.com.np/",
     },
 
     {
       image: img3,
       category: "web app",
       name: "school management system",
+      url: "https://hubit.com.np/",
     },
     {
       image: img4,
       category: "website",
       name: "E-aribt Blog portal",
+      url: "https://e-aribt.com/",
     },
 
     {
       image: img5,
       category: "website",
       name: "Insta k trade",
+      url: "https://hubit.com.np/",
     },
     {
       image: img6,
       category: "website",
       name: "Hub-it institute",
+      url: "https://hubit.com.np/",
     },
   ];
 
   return (
     <div id="projects">
-      <div className="text-2xl md:text-4xl  uppercase pt-16 md:pt-24 font-bold">
+      <div className="text-2xl md:text-4xl  uppercase pt-16 md:pt-24 font-medium">
         my projects
       </div>
       <div className=" px-2  relative z-20 ">
@@ -108,46 +115,46 @@ function Project({ value }) {
                   }   relative z-50 cursor-pointer  `}
                   //   onClick={() => redirectViewPortfolio(i)}
                 >
-                  {/* <Link href={{router.push()}}> */}
-                  <div className=" relative border-t bg-black shadow-md shadow-[#9d9898] ">
-                    <div className=" h-[200px]  md:h-[250px]  ">
-                      <Image
-                        src={val.image}
-                        // placeholder="blur"
-                        //   srcSet={`${val.image} 2x, ${val.image} 600vw`}
-                        //   blurDataURL={val.image}
-                        // priority
-                        alt={"loading ..."}
-                        height={"100%"}
-                        width={"100%"}
-                        className="w-full h-[200px] md:h-[250px]    object-cover object-top md:object-center "
-                      />
-                      <div
-                        className="
+                  <Link href={`${val?.url}`}>
+                    <div className=" relative border-t bg-black shadow-md shadow-[#9d9898] ">
+                      <div className=" h-[200px]  md:h-[250px]  ">
+                        <Image
+                          src={val.image}
+                          // placeholder="blur"
+                          //   srcSet={`${val.image} 2x, ${val.image} 600vw`}
+                          //   blurDataURL={val.image}
+                          // priority
+                          alt={"loading ..."}
+                          height={"100%"}
+                          width={"100%"}
+                          className="w-full h-[200px] md:h-[250px]    object-cover object-top md:object-center "
+                        />
+                        <div
+                          className="
                       //  hover:bg-gradient-to-b picsDelay w-full h-[200px] md:h-[250px] hover:from-[#69a1ab]
                       //    bg-gradient-to-t from-[#152a2e]
                       //   hover:opacity-70  absolute top-0 flex   justify-ceter items-center z-50 "
-                      >
-                        <div className="flex  relative  w-11/12 mx-auto     flex-col justify-between items-center">
-                          <div
-                            className=" text-white  text-center  text-lg sm:text-xl md:text-2xl lg:text-3xl Poppins font-medium capitalize
+                        >
+                          <div className="flex  relative  w-11/12 mx-auto     flex-col justify-between items-center">
+                            <div
+                              className=" text-white  text-center  text-lg sm:text-xl md:text-2xl lg:text-3xl Poppins font-medium capitalize
                          w-full h-[100px]  "
-                          >
-                            {val.name}
-                          </div>
-                          <div
-                            className=" absolute  top-[80px] text-[white] border border-[#3d3d3d] 
+                            >
+                              {val.name}
+                            </div>
+                            <div
+                              className=" absolute  top-[80px] text-[white] border border-[#3d3d3d] 
                             text-sm border-opacity-100 w-fit bg-[black] bg-opacity-60 rounded-[2px]
                              px-4 py-2 font-light capitalize
                            "
-                          >
-                            {val.category}
+                            >
+                              {val.category}
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  {/* </Link> */}
+                  </Link>
                 </div>
               );
             });
