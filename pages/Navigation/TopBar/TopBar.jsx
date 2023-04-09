@@ -130,7 +130,11 @@ function TopBar({ DarkTheme, Theme }) {
                   <ScrollTo selector={`${val.id}`}>
                     {" "}
                     <div
-                      className={`hover:scale-105 ${inter.className}
+                      className={`hover:scale-105 ${inter.className} ${
+                        val.path === router.asPath
+                          ? "bg-[gray] bg-opacity-40 text-white"
+                          : ""
+                      }
                     cursor-pointer px-4 py-2 text-2xl ${
                       DarkTheme
                         ? "hover:bg-[white]  hover:text-[#171C28] hover:bg-opacity-40 "
@@ -214,7 +218,13 @@ function TopBar({ DarkTheme, Theme }) {
                           <ScrollTo selector={`${val.id}`}>
                             {" "}
                             <div
-                              className={` my-2 px-6 mx-auto  duration-300 delay-100 cursor-pointer py-4 text-2xl  border-b hover:text-white hover:bg-[#d6d6d6] w-[98%] `}
+                              className={` 
+                              ${
+                                val.path === router.asPath
+                                  ? "bg-[gray] bg-opacity-40 text-white"
+                                  : ""
+                              }
+                              my-2 px-6 mx-auto  duration-300 delay-100 cursor-pointer py-4 text-2xl  border-b hover:text-white hover:bg-[#d6d6d6] w-[98%] `}
                               onClick={() => setShowSidebar(false)}
                             >
                               {val.title}
