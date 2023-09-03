@@ -213,11 +213,11 @@ function WhatIDo() {
             <div className="w-full">
               <div className={`bg-[#bfbfbf] rounded-xl w-[100%] h-[10px]`}>
                 <div
-                  className={`bg-orange-500 rounded-xl w-[100%] h-[10px] transition-all ease-in-out delay-500 duration-1000`}
+                  className={`bg-orange-500 rounded-xl w-[90%] h-[10px] transition-all ease-in-out delay-500 duration-1000`}
                 >
                   <div className="absolute top-14 text-orange-500  text-sm  -right-10">
                     {" "}
-                    100%
+                    90%
                   </div>
                 </div>
               </div>

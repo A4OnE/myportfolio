@@ -58,12 +58,23 @@ function Project({ value }) {
     {
       image: img4,
       category: "website",
-      name: "E-aribt Blog portal",
-      url: "https://e-aribt.com/",
+      name: "E-aribt Blog portal CMS",
+      url: "https://e-aribtcms.vercel.app/",
     },
-
     {
       image: img5,
+      category: "website",
+      name: "E-aribt Blog portal ",
+      url: "https://e-aribt.vercel.app/",
+    },
+    {
+      image: img1,
+      category: "Accounting Software",
+      name: "Butwal chamber of commerce",
+      url: "https://bucci.netlify.app/",
+    },
+    {
+      image: img4,
       category: "website",
       name: "Insta k trade",
       url: "https://hubit.com.np/",
@@ -73,6 +84,18 @@ function Project({ value }) {
       category: "website",
       name: "Hub-it institute",
       url: "https://hubit.com.np/",
+    },
+    {
+      image: img1,
+      category: "webapp",
+      name: "Online Shop clothes store",
+      url: "https://online-shop-clothes.vercel.app/",
+    },
+    {
+      image: img,
+      category: "webapp",
+      name: " salon App ",
+      url: "https://dreamsalon.vercel.app/",
     },
   ];
 

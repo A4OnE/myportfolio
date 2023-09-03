@@ -10,7 +10,7 @@ const inters = Raleway({ subsets: ["latin"], weight: ["400"], preload: true });
 
 function Footer() {
   return (
-    <div className="  flex flex-col items-center Raleway  py-8 px-2 md:px-0">
+    <div className="  flex flex-col items-center Raleway h-full py-8 px-2 md:px-0">
       <div>
         <Link href={"/"}>
           <div
