@@ -23,7 +23,6 @@ import { Fade, Slide, Zoom } from "react-awesome-reveal";
 // import TopBar from "../Navigation/TopBar/TopBar";
 import ScrollTo from "react-scroll-into-view";
 import { Inter, Raleway, Fasthand } from "next/font/google";
-import { Agustina } from "next/font/google";
 const inter = Fasthand({ subsets: ["latin"], weight: ["400"], preload: true });
 const inters = Raleway({ subsets: ["latin"], weight: ["400"], preload: true });
 
@@ -33,17 +32,14 @@ function TopBar({ DarkTheme, Theme, Reloads, setShow, show }) {
 
   const [showSidebar, setShowSidebar] = useState(false);
   const [showCancelButton, setShowCancelButton] = useState(false);
-  const [shows, setShows] = useState("");
   const router = useRouter();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.pageYOffset > 100) {
         setImageHeight(true);
-        // setShows(true);
       } else {
         setImageHeight(false);
-        //   setShows(false);
       }
     });
   }, []);
@@ -110,6 +106,15 @@ function TopBar({ DarkTheme, Theme, Reloads, setShow, show }) {
 
   return (
     <>
+      <Head>
+        <link
+          rel="preload"
+          href="/static/media/Agustina.21f233e1.woff"
+          as="font"
+          type="font/woff"
+          crossorigin
+        />
+      </Head>
       <div
         className={`sticky ${
           scrollDirection === "down" ? "-top-24 " : "top-0 "

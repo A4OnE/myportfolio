@@ -35,28 +35,37 @@ NCIT, a pioneer private institution  providing engineering education in  Nepal, 
   ];
   const experience = [
     {
-      from: "2060 B.S",
-      to: "2070 B.S",
-      university_name: "high school",
-      college_name: "apex school",
-      degree: "higher education",
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum harum, impedit labore nesciunt rerum voluptates doloremque exercitationem architecto odit eos ea, distinctio commodi minima recusandae veniam magnam aperiam iusto cum.`,
+      from: "2021 A.D",
+      to: "upto 6-8 Months",
+      university_name: "internship",
+      college_name: "Internship",
+      degree: "laliguras technology",
+      description: `Laliguras Technology is a software company that focused on providing quality products and Help you to turn your idea into a business. And More than that, they will give us wings to fly by building an amazing product and customer support.`,
     },
     {
-      from: "2014 A.D",
-      to: "2016 A.D",
-      university_name: "Pokhara university",
-      college_name: "Tilottama College",
-      degree: "science & technology",
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum harum, impedit labore nesciunt rerum voluptates doloremque exercitationem architecto odit eos ea, distinctio commodi minima recusandae veniam magnam aperiam iusto cum.`,
+      from: "2021 A.D",
+      to: "2022 A.D",
+      university_name: "kalikanagar, butwal",
+      college_name: "junior front-end developer",
+      degree: "Sikka-I",
+      description: `The word SIKKA-I is derived from two Nepali words Sikka and sikaai. Here Sikka means money and sikaai means learning. They always wanted to serve people in learning and also with a great earning opportunity. To meet both learning and earning opportunities we came up with this unique and first time in Nepal project i.e. SIKKA-I.
+This project is focused on special skill-based non-academic education for free learners. As this project is an online learning and earning platform it will be launched all over Nepal. It will be a great platform for people who seek wonderful opportunities to learn and earn freely and pursue a safe career inside the country. This will generate huge learning and career development opportunities for youths.`,
     },
     {
-      from: "2016 A.D",
-      to: "2021 A.D",
-      university_name: "Pokhara university",
-      college_name: "Nepal college of information technology",
-      degree: "software engineering",
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum harum, impedit labore nesciunt rerum voluptates doloremque exercitationem architecto odit eos ea, distinctio commodi minima recusandae veniam magnam aperiam iusto cum.`,
+      from: "2022 A.D",
+      to: "present",
+      university_name: "milanchowk, butwal",
+      college_name: "part-time web developer",
+      degree: "hub-it institute",
+      description: `HUB IT is recognized as one of Nepal’s best global skill development and IT training centers. The journey of HUB IT started in 2017 with a big dream to bring applied education to the mass population at an affordable cost. The main purpose of HUB IT is to facilitate, with the best IT-related skills.`,
+    },
+    {
+      from: "2022 A.D",
+      to: "present",
+      university_name: "yogikuti, butwal",
+      college_name: "front-end developer",
+      degree: "aribt",
+      description: `Abhyam Robotics Institution of Business and Technology , ARIBT. An Edu-tech company looking to bring change through Technology. Also they provide best tech support and services to the clients if they need any services. Which is why they provide their students with the opportunity to work on real-world projects and case studies that gives us an edge in market and personal growth.`,
     },
   ];
   return (
@@ -147,7 +156,7 @@ NCIT, a pioneer private institution  providing engineering education in  Nepal, 
           </Slide>
           <Slide direction="right" triggerOnce cascade damping={1e-1}>
             <div className="my-6">
-              {education.map((val, i) => {
+              {experience.map((val, i) => {
                 return (
                   <div key={i} className="md:grid  grid-cols-12 my-7">
                     <div className=" col-span-5">
@@ -176,7 +185,7 @@ NCIT, a pioneer private institution  providing engineering education in  Nepal, 
                         <div className="w-full h-[1px] md:hidden bg-gray-200 my-5"></div>
 
                         <div className=" text-lg">Information: </div>
-                        <div className="h-[180px]  scroll text-sm overflow-scroll">
+                        <div className="h-48 scroll overflow-scroll">
                           {val.description}
                         </div>
                         <div className="w-full h-[1px] md:hidden bg-gray-200 my-5"></div>
